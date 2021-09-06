@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css//after-signing.css" />
+    <title>After Signing - Cisco Gulf Partner Summit</title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="bg-main">
+        <video autoplay muted loop id="myVideo">
+          <source
+            src="../videos/entrance1.mp4"
+            id="video-src"
+            type="video/mp4"
+          />
+          Your browser does not support HTML5 video.
+        </video>
+        <div
+          class="background-image-mobile"
+          style="
+            background-image: url(https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/countdown-mobile.png);
+          "
+        ></div>
+      </div>
+      <div id="enter-btn">
+        <a href="#" id="video-popup">Enter Lobby</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("video-popup").onclick = function () {
+        document.getElementById("myVideo").src =
+          "../videos/entrance-transition.mp4";
+
+        document.getElementById("enter-btn").classList.add("display-none");
+
+        setTimeout(function () {
+          location.href = "./lobby.html";
+        }, 3900);
+      };
+    </script>
+  </body>
+</html>
