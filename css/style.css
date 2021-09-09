@@ -1,3 +1,25 @@
+@font-face {
+  font-family: "ciscosansttregular";
+  src: url("../Fonts/CiscoSansRegular.otf") format("openType");
+}
+
+@font-face {
+  font-family: ciscosans;
+  src: url("../Fonts/CiscoSansBold.otf") format("openType");
+  font-weight: bold;
+}
+@font-face {
+  font-family: ciscosans;
+  src: url("../Fonts/CiscoSansLight.otf") format("openType");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: ciscosans;
+  src: url("../Fonts/CiscoSansTTBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
 #myVideo {
   /* position: fixed;
   right: 0;
@@ -21,7 +43,7 @@
   width: auto;
   padding: 2% 2%;
   border-radius: 20px;
-  font-family: "Cisco Sans";
+
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
@@ -36,7 +58,7 @@
   border: 2px solid #00bceb;
 }
 p {
-  font-size: medium;
+  font-weight: 500;
 }
 
 .submit-button {
@@ -51,16 +73,21 @@ p {
 input,
 select {
   border: 2px solid #0a253b;
-  width: 85%;
+  width: 70%;
   border-radius: 50px;
   text-align: center;
   margin-bottom: 5px;
-  padding: 9px 20px;
+  padding: 8px 15px;
   font-size: 14px;
   color: #0a253b;
   text-align-last: center;
   text-align: -webkit-center;
 }
+
+input:en {
+  background-color: aquamarine;
+}
+
 .background-image-mobile {
   position: fixed;
   display: none;
@@ -87,7 +114,7 @@ select {
     top: 45%;
     left: 1rem;
     max-width: 95%;
-    width: 425px;
+    width: 415px;
     padding: 2% 2%;
     font-size: 1rem;
   }

@@ -42,13 +42,13 @@
   display: inline-block;
 }
 
-#video-popup::before {
+#video-popup::after {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(../images/animation.gif);
+  background-image: url(http://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/animation.gif);
   background-repeat: no-repeat;
   background-position: center center;
   width: 300px;

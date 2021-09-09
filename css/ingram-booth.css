@@ -1,0 +1,112 @@
+.back-to {
+  position: fixed;
+  top: 135px;
+  left: 30px;
+}
+
+.downloadsmain a,
+.back-to a,
+.chatrep a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 125px;
+  padding-left: 10px;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.chatrep {
+  position: fixed;
+  top: 78%;
+  left: calc(50% - 20%);
+}
+
+.downloadsmain {
+  position: fixed;
+  top: 78%;
+  left: calc(50% + 10%);
+}
+
+.logicom-vedio {
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  transform: translate(-52%, 0%);
+  width: 300px;
+}
+.chat_areas_rep {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.chat_areas_rep h5 {
+  color: #fff;
+  font-size: 21px;
+}
+
+.chat_areas_rep a {
+  background-color: #00bceb;
+  padding: 10px 45px;
+  border-radius: 50px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.chat_areas_reps p {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  font-weight: 500;
+}
+
+.download-modal .modal-content {
+  height: 180px;
+  width: 80vw;
+}
+
+.download_areas ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.download_areas ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.download_areas ul li strong {
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.download_areas ul li a {
+  background-color: #00bceb;
+  padding: 15px 50px;
+  border-radius: 50px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1450px) {
+  .chatrep {
+    left: calc(50% - 23%);
+  }
+
+  .downloadsmain {
+    left: calc(50% + 14%);
+  }
+
+  .logicom-vedio {
+    transform: translate(-51%, 0%);
+    width: 290px;
+  }
+}

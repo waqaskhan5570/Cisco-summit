@@ -1,0 +1,82 @@
+.visitphotobooth {
+  position: fixed;
+  left: calc(50% - 37%);
+  top: 42%;
+}
+
+.visitingram {
+  position: fixed;
+  top: 42%;
+  left: calc(50% - 19%);
+}
+
+.visitlogicom {
+  position: fixed;
+  left: calc(50% + 11%);
+  top: 41%;
+}
+
+.browsegames {
+  position: fixed;
+  left: calc(50% + 33%);
+  top: 42%;
+}
+
+.visitphotobooth a,
+.visitingram a,
+.visitlogicom a,
+.browsegames a {
+  min-height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* browse games pop up */
+
+.single-popup-body {
+  height: 100%;
+  overflow: auto;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.popup-body {
+  overflow: hidden;
+}
+.games-areas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-game {
+  width: 25%;
+  border-right: 1px solid #fff;
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.single-game img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bottom-content-game {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.bottom-content-game h5 {
+  font-size: 18px;
+}
+.bottom-content-game a {
+  background-color: #00bceb;
+  padding: 10px 40px;
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 50px;
+  color: #fff;
+  border: 1px solid #fff;
+}
