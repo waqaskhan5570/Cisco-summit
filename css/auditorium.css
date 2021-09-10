@@ -19,7 +19,77 @@
 .watch-buttons-area.v2.desktop-only a {
   min-width: 130px;
   display: block;
+<<<<<<< HEAD
   text-align: center;
+=======
+}
+
+.main-section .navbar .right-text {
+/*   margin-right: 10px;
+  width: 170px;
+  height: 50px;
+  border-left: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; */
+  margin-left: 30px;
+  border-left: 1px solid #fff;
+  padding-left: 0px;
+  margin: 5px 0;
+  min-width: 180px;
+}
+
+.main-section .navbar .right-text h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 19px;
+  color: #fff;
+}
+
+.main-section .side-btns {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  z-index: 99999;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-bottom: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.main-section .side-btns .btns {
+  margin-right: 20px;
+  width: 30%;
+  height: 200px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.main-section .side-btns .btns .btn-style {
+  width: 135px;
+  height: 40px;
+  border: 2px solid #f7f2f2;
+  border-radius: 30px;
+>>>>>>> dfb11bbaca85d410617fc8fa9fb84d62ee22c633
   background-color: #1e4471;
   color: #fff;
   height: 100%;
