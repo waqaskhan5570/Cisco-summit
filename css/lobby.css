@@ -388,13 +388,6 @@ strong {
   margin: auto;
 }
 
-.agenda_day_select {
-  display: none;
-}
-.agenda_day_select.active {
-  display: block;
-}
-
 /* day */
 .educational-section {
   display: flex;
@@ -910,5 +903,42 @@ button.close_contact {
 
   a-right-right {
     width: 27%;
+  }
+}
+
+@media only screen and (min-width: 2560px) and (max-width: 2700px) {
+  .auditorium a,
+  .breakout-sessions a,
+  .networking-louge a,
+  .visitphotobooth a,
+  .visitingram a,
+  .visitlogicom a,
+  .browsegames a,
+  .downloadsmain a,
+  .back-to a,
+  .chatrep a,
+  .speakers-bio a,
+  .feedbacks a,
+  .security a {
+    padding: 7px 46px;
+    font-size: 18px;
+  }
+
+  .auditorium a::after,
+  .breakout-sessions a::after,
+  .networking-louge a::after,
+  .visitphotobooth a::after,
+  .visitingram a::after,
+  .visitlogicom a::after,
+  .browsegames a::after,
+  .back-to a::after,
+  .chatrep a::after,
+  .downloadsmain a::after,
+  .speakers-bio a::after,
+  .feedbacks a::after,
+  .security a::after {
+    width: 135px;
+    height: 135px;
+    transform: translate(-50%, -50%);
   }
 }

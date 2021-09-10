@@ -215,6 +215,17 @@ function goToAudi() {
   }, 4000);
 }
 
+function goToBr() {
+  document.getElementById("background-video").src =
+    "../videos/br-transition.mp4";
+
+  document.getElementById("lobby-content").classList.add("display-none");
+
+  setTimeout(function () {
+    location.href = "breakout-session.html";
+  }, 5000);
+}
+
 function mute() {
   let iframe = document.getElementById("video_player_area_lobby");
   let btn = document.getElementById("muteunmute");

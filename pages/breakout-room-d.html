@@ -4,28 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/lobby.css" />
-    <link rel="stylesheet" href="../css/auditorium.css" />
-
-
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <title>Auditorium - Cisco Gulf Partner Summit</title>
-  </head>
-  <body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />  
+    <link rel="stylesheet" href="../css/lobby.css" />
+    <link rel="stylesheet" href="../css/breakout-room-a.css" />
+    <title>Breakout Room D day 1 - Cisco Gulf Partner Summit</title>
+  </head>   
+   <body>
  
-    <div class="background-image-desktop" style="background-image:url(../img/background-img.png)"></div>
- <div id="lobby-content">
+    
+        <div class="background-image-desktop" style="background-image:url(../img/breakout-days.png);"></div>
+        <!-- <div class="background-image-mobile" style="background-image:url(https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/background-mobile.png);"></div> -->
+    
+ <div id="breakout-content">
     <div class="nav-menu-area">
       <div class="main-menuarea">
         <div class="logo-area">
@@ -77,23 +77,47 @@
     </div>
     <!--  -->
 
-    <div class="watch-button">
-        <div class="watch-buttons-area v2 desktop-only">
-            <a href="#" >Watch Day 1</a>
+    
+
+    <div class="left-side-breakout desktop-only">
+        <div class="area-top-break collaboration">
+            <h3>Breakout Room D:</h3>
+            <h2>Partner Programs</h2>
         </div>
-        <div class="watch-buttons-area v2 desktop-only">
-            <a href="#">Watch Day 2</a>
+        <div class="area-bottom-break">
+            <div class="security button-p1">
+                <a href="#" >Feedback</a>
+            </div>
+            <div class="security button-p2">
+                <a href="breakout-session.html"><img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/single-arrow.png"> Breakout Rooms </a>
+            </div>
+        </div> 
+    </div>
+
+    <div class="right-side-breakout desktop-only">
+        <div class="area-righttop-break">
+            
+        </div>
+        <div class="area-rightbottom-break">
+            <div class="watch-buttons-area v2 desktop-only">
+                <a href="#" id="watch-1" onclick="play_video_day(this.id)">Watch Day 1</a>
+            </div>
+            <div class="watch-buttons-area v2 desktop-only">
+                <a href="#" id="watch-2" onclick="play_video_day(this.id)">Watch Day 2</a>
+            </div>
+            <div class="speakers-bioa security">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#speakers-bio">Speakers Bio</a>
+            </div>
         </div>
     </div>
 
-    <div class="speakers-bio desktop-only">
-        <a href="#" data-bs-toggle="modal" data-bs-target="#speakers-bio" >Speakers Bio</a>
+    <div id="video-1" class="breakouts_videos auditoriam_videos active" >
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="auditoriam_video_1" src="https://player.vimeo.com/video/535188594" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" __idm_id__="1043184649" data-ready="true"></iframe></div>
     </div>
-
     
-
- 
-    
+    <div id="video-2" class="breakouts_videos auditoriam_videos">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="auditoriam_video_2" src="https://player.vimeo.com/video/535197533" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;" __idm_id__="1043184648" data-ready="true"></iframe></div>
+    </div>
     
     
     <div class="bottom-button desktop-only">
@@ -106,730 +130,17 @@
       </ul>
     </div>
 
-    <!-- Speakers bio -->
-    <div class="modal text-center" id="speakers-bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- All pop ups -->
+
+    <!-- Speakers Bio -->
+     <div class="modal text-center" id="speakers-bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
             <div class="modal-content ">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body ">
-                <!-- Choose days -->
-                    <div class="choose_days">
-                        <h5>Choose Day:</h5>
-                        <ul>
-                            <li class="active" id="choose_day_1" onclick="changeBioDay(this.id)"><a href="#"  >Day 1 (April 6th)</a></li>
-                            <li class=""  id="choose_day_2" onclick="changeBioDay(this.id)"><a href="#" >Day 2 (April 7th)</a></li>  
-                        </ul>
-                    </div>
-                    <!-- Choose Breakouts -->
-                    <div class="choose_breakouts">
-                        <h5>Choose Breakout rooms/Auditorium:</h5>
-                        <ul>
-                            <li class="active" id="bio_auditorium" onclick="changeBioTab(this.id)"><a href="#" >Auditorium</a></li>
-                            <li class="" id="bio_security" onclick="changeBioTab(this.id)"><a href="#" >Security</a></li>
-                            <li class="" id="bio_cloud" onclick="changeBioTab(this.id)"><a href="#" >Cloud &amp; DC</a></li>
-                            <li class="" id="bio_collaboration" onclick="changeBioTab(this.id)"><a href="#" >Collaboration</a></li>
-                            <li class="" id="bio_partner" onclick="changeBioTab(this.id)"><a href="#" >Partner Programs</a></li>
-                        </ul>
-                    </div>
-                    <!-- Choose bio areas -->
-                    <div class="bio_areas">
-                            <div class="bio_days active" id="bio_day_1">
-                                <div class="bio_rooms bio_auditorium active">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Shadi-Salama.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Shadi Salama </h2>
-                                                    <h4>Channel Lead - Gulf Region </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Welcome Address</h6>
-                                                <p><strong>Profile:</strong> Shadi Salama leads the Partner Organization across the Gulf Region in Middle East &amp; Africa Theater. This team focuses on driving Cisco's Go To Market strategy and implementation across the wide. Additionally, they focus on how they increase partner loyalty and profitability.
-                                                Shadi has spent the last 16 years in various roles within Cisco - from Account management to key leadership responsibilities. Today, his focus is on driving the channel and the overall state of regional Partner ecosystem within the Gulf region.
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Dorian-Breakspear.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Shukri Eid</h2>
-                                                    <h4>Managing Director – Gulf Region<br>Cisco Middle East </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Keynote Address – Future Ready</h6>
-                                                <p>Profile: Shukri Eid is Managing Director – Gulf Region, at Cisco Middle East. In his current role, Shukri heads Cisco’s business and operations across Afghanistan, Bahrain, Kuwait, Oman, Pakistan, Qatar, UAE and Yemen. With a key focus on digitization and the Internet of Things, Shukri is helping drive Cisco’s digital agenda, competitive positioning and business strategy across the markets he oversees. 
-                                                
-                                                A Cisco veteran of 13 years, Shukri’s responsibilities include driving Cisco’s strategy across his markets to ensure execution on business objectives, in addition to forging close relationships with governments, customers and channel ecosystem partners. He is valued for building results-oriented and enthusiastic teams and as a hands-on client and partner executive. Shukri has established himself as a thought leader and agent of change in fast-evolving, dynamic markets, and is known for his deliberate, strategic approach to complex challenges, his authenticity and his people management skills. 
-                                                Shukri has worked in several capacities across the organization and possesses deep industry knowledge and a profound appreciation for the impact and opportunities presented by digitization. Most recently, he was Managing Director – East Region, Cisco Middle East, and previously Senior Director at the Country Digitization Acceleration (CDA) team in Europe, Middle East, Africa, Russia and CIS, where he worked with government and industry leaders to accelerate the national digitization strategies. Prior to that, he led a diverse team of senior consulting professionals as Director of Cisco Consulting Services in Emerging Markets. 
-                                                
-                                                Shukri is a Cisco Leadership Pipeline Program alumnus and has over 19 years of business and technology consulting experience, notably in strategy development and implementation. He worked with senior officials and executives to help them develop and lead digital transformation strategies and business models. 
-                                                Prior to Cisco, Shukri held senior roles at IBM Global Business Services and PricewaterhouseCoopers, where he led high-profile strategy and IT transformational engagements in the Middle East and North Africa. 
-                                                Shukri has a master’s degree in business administration from Strathclyde University and a bachelor’s degree in electrical and computer engineering from Jordan University of Science and Technology. He has tutored EMBA students on Exploring International Business Environment and Future Scenarios Planning, and is a regular guest speaker at industry forums and academic institutions. 
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Elisabeth-De-Dobbeleer.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Reem Asaad</h2>
-                                                    <h4>Vice President<br>Middle East and Africa, Cisco</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Keynote Address – An Inclusive Future For All</h6>
-                                                <p><strong>Profile:</strong> Reem has a wealth of experience in business leadership and strong understanding of the digital transformation landscape.
-                                                
-                                                Prior to joining Cisco, Asaad held the position of CEO at Raya Contact Center, a business process outsourcing service provider based in Cairo with operations in Europe, Middle East, and Africa, servicing multi-national and Fortune 500 companies. During this role, she was instrumental in driving the company growth and go-to-market strategy, digital transformation, and regional market development.
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                           
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Reem.png" alt="">
-                                                </div> 
-                                                <div class="bios_details">
-                                                    <h2>Elisabeth De Dobbeleer</h2>
-                                                    <h4>VP, EMEAR Partner Organization</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Keynote Address – Agile, Relevant &amp; Profitable</h6>
-                                                <p><strong>Profile:</strong> Elisabeth is Cisco EMEA’s partner organization leader and has responsibility for developing strategic initiatives and program innovations with Cisco’s EMEA channel partners to grow a profitable business together. She has spent eighteen years at Cisco in a variety of global and regional roles, leveraging her legal background, but also her change agent, operational and business development skills.&nbsp;
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Dorian-Breakspear2.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Adele Trombetta</h2>
-                                                    <h4>Vice President CX MEA and<br> Technology Transformation</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Customer Experience in a Digital-First World</h6>
-                                                <p><strong>Profile:</strong> Adele Trombetta is a passionate and proven technology leader, a recognized transformation agent who employs automation, deploys new delivery models, and invests in front-end resources to accelerate growth. As vice president of Cisco Advanced Services in EMEAR, Adele leads service delivery and customer value creation in the region.
-                                                
-                                                Her career to date includes leadership roles at DXC Consulting, a company formed by the combination of CSC Consulting and HPEnterprise Services, HPE Enterprise Services and IBM.
-
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_security ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 7.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Rami Abbas</h2>
-                                                    <h4>Regional Technology Incubation Specialist/Lead </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> SASE + SD-WAN</h6>
-                                                <p><strong>Profile:</strong> Rami Abbas is an IT industry veteran with close to 10 years of experience in the Cyber Security space. Rami currently leads Cisco cloud Security across the Middle East. Before joining Cisco, Rami held positions at different Cyber Security Industry leaders. He brings with him a strong experience in the space of Manager Cyber Security as he worked for multiple years at leading Service Providers in the region.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 8.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Ahmad Chehime </h2>
-                                                    <h4>Regional Technology Incubation<br>Specialist/Lead </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Cisco Microsegmentation and Workload Protection </h6>
-                                                <p><strong>Profile:</strong> Ahmad Chehime is a Regional Technology Incubation Specialist/Lead – currently leading Cisco's Secure Workload (Formerly Tetration) and Network Analytics (Stealthwatch) Products Portfolio and customer adoption across Middle East and Africa 
-                                                Ahmad is a 21 year Cisco veteran, joined Cisco USA in San Jose, California in early 2000 as a Technical Marketing Engineer focusing on Service Providers Leased-Lines and Broadband Aggregation Architectures. Worked closely with major Service Providers Worldwide and has extensive experience in Service Provider infrastructure deployments.
-
-                                                In early 2006, Ahmad took on a Product Management role to drive Cisco's next generation Mid-range router portfolio ASR 1000 and Cisco 7x00 business at a global level. In that role, Ahmad led the new Cisco ASR-1000 product family’ full product development lifecycle.
-
-                                                In 2009, Ahmad moved to Saudi Arabia and joined Cisco KSA and led a team of Systems and Network Consultant Engineers to design network infrastructure blueprints for Mega-Cities projects. A year later Ahmad worked closely with the incumbent service provider in KSA; STC on various major projects, MPLS Backbone, Broadband Aggregation, IPTV, and International PoPs whole-sale transport services.
-
-                                                In early 2014, Ahmad moved to Dubai, UAE and has been representing Cisco World-Wide New Technologies Incubation Team. Working closely with our customers to make their Digital Transformation journey a reality by evangelizing the Cisco’s Next-Generation DC SDN Architecture, Secure Workload and Analytics strategy. 
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 9.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Mahmoud Rabi </h2>
-                                                    <h4>Cyber Security Specialist</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> SecureX </h6>
-                                                <p><strong>Profile:</strong> Mahmoud is a cyber security specialist working for Cisco Systems. He has over 15 years experience in the Cybersecurity domain with focus on advanced threats prevention and next generation security solutions. Mahmoud has worked for several cyber security focused vendors across Middle East and Africa. Currently, Mahmoud is leading Cisco security business for UAE Enterprise and Public Sector.
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_cloud ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 10.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Bilal Sherrief </h2>
-                                                    <h4>Technical Solution Architect </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Nexus Dashboard &amp; Hybrid Cloud Networking </h6>
-                                                <p><strong>Profile:</strong> Bilal Sherrief is a Technical Solution Architect part of the Middle East and Africa Cloud Infrastructure and Software Group. 
-                                                Bilal joined Cisco in 2006 and over the years he has worked with organizations across the region in multiple verticals to 
-                                                understand some of their key business drivers and how technology can provide a platform to drive transformation and
-                                                enable business outcomes. 
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 11.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Mazen Abou Najm </h2>
-                                                    <h4>Cloud Infrastructure and Software Group (CISG) Leader</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Intersight: Hybrid Cloud Platform </h6>
-                                                <p><strong>Profile:</strong> Mazen Abou Najm leads the Cloud Infrastructure &amp; Software Group (CISG) architecture organization in Middle East &amp; Africa. This team focuses on Cisco’s Application Experience, Hybrid Cloud Networking, and Compute, Storage, and DC Software solutions. Mazen is currently based in Dubai, he has been working with Cisco since 2010 across different countries and roles in systems engineering and architecture sales. He holds certifications from Cisco, VMware, AWS, and enjoys working with customers and partners to build innovative DC &amp; Cloud solutions.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 15.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Karim Hindawi </h2>
-                                                    <h4>Channel Manager - MEA</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Intersight: Cisco Observability Platform</h6>
-                                                <p><strong>Profile:</strong> Karim Hindawi is the channel manager at Middle East and Africa working in AppDynamics.<br>
-
-                                                A subject matter expert, Karim covers the portfolio off AppDynamics which is Designed for production and pre-production environments and giving customers visibility on their entire application topology from a single pane of glass.<br>
-
-                                                Karim covers the areas of:<br>
-
-                                                Application Performance Management
-                                                Monitor and manage end-to-end performance of complex distributed applications.<br>
-
-                                                End User Monitoring
-
-                                                Deliver a better user experience with Mobile and Browser Real-User Monitoring and Browser Synthetic Monitoring.<br>
-
-                                                Infrastructure Visibility
-                                                Unlock deeper insights by correlating server and database performance with application performance.<br>
-
-                                                Real-time Business Monitoring
-                                                Get real-time business awareness into IT operations, customer experience, and business outcomes with Transaction, Log, Browser, and Mobile Analytics.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_collaboration ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 16.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>George Gharios</h2>
-                                                    <h4>Sales Specialist</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Delivering the Future of Customer Experience</h6>
-                                                <p><strong>Profile:</strong> George Joined Cisco Advanced Servers in 2007 as Contact Center Consulting Engineer. During his work in Cisco services&nbsp;George&nbsp;Led&nbsp;multiple account transformations by understanding, identifying gaps, working with customers, account teams and services organization to propose and implement comprehensive solutions.
-                                                George&nbsp;played a key role in creating multiple Services opportunities as well as leading complex delivery engagements by working internally and with different Cisco partners to meet the challenging customer requirements.
-                                                Then in December 2020, George Joined the Contact Center Sales Specialist team covering Middle East and Africa.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 17.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Fabien Habbouche</h2>
-                                                    <h4>Collaboration Sales Specialist</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Return to Office – Supporting your new Hybrid workforce </h6>
-                                                <p><strong>Profile:</strong> Fabien, a skilled network consultant with an outstanding background in network design and implementation, has close to 14 years of experience in the networking domain with a focus on Cisco’s Collaboration technologies.
-                                                
-                                                Fabien started his career with Cisco in 2015 as a Smart Cities Consultant. Shortly after that, he moved to become an Enterprise Account SE covering retail, transport and logistics and oil and gas customers. Fabien is currently a Collaboration Sales Specialist covering UAE, Oman and Pakistan.
-                                                
-                                                Fabien has a bachelor’s degree in Computer and Communications Engineering. His passion and area of interest has always been around Cisco’s Collaboration technologies. Fabien has also achieved his CCIE in Collaboration back in 2010.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 18.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Yaman Hakmi</h2>
-                                                    <h4>System Engineering Leader for<br> Collaboration Technology</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Secure Remote Work</h6>
-                                                <p><strong>Profile:</strong> Yaman is the system engineering leader for collaboration technology in Middle East &amp; Africa.   Yaman has over 16 years of industry experience in the ICT field.   In his current role, Yaman leads a team of technical solution architects, and works extensively with customers and partners on leveraging the Webex platform to drive strategic engagements, accelerate workspace transformation and advance customer engagement initiatives.  
-                                                In a prior role, Yaman led the operations and engagement team at Cisco’s Innovation and Experience Center.  This included developing cutting-edge vertical journeys based on end user persona, leveraging business architecture &amp; programmability for integrating with ecosystem partners and driving the value proposition of these journeys towards achieving business outcomes.
-                                                .</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_partner ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 19.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Shaheen Niloufer</h2>
-                                                    <h4>Partner Business Development<br>Specialist, Gulf</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> CX PROFITABILITY - Programs &amp; Specialisation </h6>
-                                                <p><strong>Profile:</strong> Shaheen has over 10 years of partner services and customer experience channel management career across Gulf and Middle East for Cisco partners and distributors. During her time at Cisco she has moved from different roles from distribution to direct and partner sales management 
-                                                Currently she’s a Partner Business Development Specialist for the Gulf region driving lifecycle transformation for strategic partners and driving their overall profitability for the CX practice 
-                                                Shaheen has driven a successful CX transformation practice by pivoting the strategic Gulf partners from traditional sales models to an organization that now focuses on the success of our customers and partner profitability.
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 20.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Stephanie Liu</h2>
-                                                    <h4>Global Lead Partner Digital Platform</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> CX PROFITABILITY – Partner experience Platform (PXP)</h6>
-                                                <p><strong>Profile:</strong> Stephanie Liu is the Global Leader of Partner Performance and Experience for Cisco’s Global Partner Organization. She is leading a team defining the digital strategy and designing the capabilities to connect Cisco and Partners more effectively, increasing profitability, and driving growth.&nbsp;Recently, her team just launched Partner Experience Platform (PXP).&nbsp;Stephanie was recognized by CRN as 2020 Women in the Channel.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div> 
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 21.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2> Deema Abdullah</h2>
-                                                    <h4>Partner Account Manager,<br>Cisco Partner Profitability Programs SME</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Partner Profitability Programs</h6>
-                                                <p><strong>Profile:</strong> Based in Dubai, United Arab Emirates - Deema is a graduate of the Cisco Sales Associate Program in Amsterdam, and is currently managing System Integrators in the UAE. She is also leading the Profitability Programs for the Gulf region, with a deep understanding of how partners can better utilise the programs and ensure they are maximising on the possible rebates they can earn with Cisco. Deema Abdullah</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bio_days hide" id="bio_day_2">
-                                <div class="bio_rooms bio_auditorium active">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 23.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Shadi Salama </h2>
-                                                    <h4>Channel Lead - Gulf Region </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Welcome Address</h6>
-                                                <p><strong>Profile:</strong> Shadi Salama leads the Partner Organization across the Gulf Region in Middle East &amp; Africa Theater. This team focuses on driving Cisco's Go To Market strategy and implementation across the wide. Additionally, they focus on how they increase partner loyalty and profitability.
-                                                
-                                                Shadi has spent the last 16 years in various roles within Cisco - from Account management to key leadership responsibilities. Today, his focus is on driving the channel and the overall state of regional Partner ecosystem within the Gulf region.
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 22.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Abdelilah Nejjari</h2>
-                                                    <h4>Chief Operating Officer and Partner Lead for Cisco Middle East and Africa</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Keynote Address – Commitment to Partner Succes</h6>
-                                                <p><strong>Profile:</strong>He is in charge of planning and executing on Cisco’s operational policies, Go-To-Market strategies and priorities as well as leading the partner organization across MEA.
-                                                By virtue of his 25 years career, he has brought to his position a well-established background in the IT industry and in professional services. By developing and designing an ongoing management of MEA Partner Strategy, Abdelilah is ensuring a strong blueprint and execution of our evolving selling motions, shifting Cisco’s and its Partners focus in the region, to Software &amp; Subscriptions based offerings. Abdelilah is driven by his ultimate desire: Enable our Partners, by developing mutual performance objectives, to deliver value to Cisco customers in their digital journey, and to implement an innovative, robust and secure IT environment in the region.
-                                                He first joined Cisco, 12 years ago, as a Commercial/Enterprise Segment lead covering Morocco and achieved great results in his first year. He was then promoted as a Regional Sales Manager for Commercial Segment for North, West and Central Africa, establishing and driving with dynamism Sales and GTM strategies. In his most recent role before taking his current responsibilities, Abdelilah was Cisco’s General Manager for North &amp; West Central Africa for more than 4 years, during which time he demonstrated ability to build and manage profitable business, while engaging and retaining high profile relationships with the local and global organizations, in both public and private sectors.
-                                                Prior to joining Cisco, Abdelilah spent more than a 15 years in IT Senior Management roles within notable IT system integrators in Morocco. With an entrepreneurship aspirations since the beginning of his career, he created and launched in 2003 his own IT Services Company, focusing on Infrastructure Services, Technical Support and Training. The company developed to become Number 1 in its field in Morocco, and was, subsequently, acquired by one of the major IT companies in the region.
-                                                Abdelilah graduated from Ecole Mohammedia des Ingenieurs, with an Engineer in Computer Science degree.
-                                                He is based in Dubai, married with 4 children.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 24.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Javed Khan</h2>
-                                                    <h4>SVP &amp; General Manager – Collaboration</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Keynote Address – The All New WebEx</h6>
-                                                <p><strong>Profile:</strong>Javed Khan is Senior Vice President and General Manager of Cisco Collaboration. He leads Cisco’s multi-billion-dollar Collaboration business which includes the award-winning Webex portfolio of Meetings, Teams, Rooms, Calling, and Contact Center. Javed has a passion for delivering amazing team collaboration experiences and brings 20+ years of enterprise and consumer product leadership to Cisco.&nbsp;&nbsp;
-                                                Prior to this position, Javed was running Cisco’s Cloud Calling business as the Vice President and General Manager. He and his team were responsible for the strategy and execution of product management, development and partner operations for the Cisco Cloud Calling Portfolio. This includes Webex Calling, Cisco BroadWorks-based solutions, Cisco Hosted Collaboration Solution (HCS) and Cisco Unified Communications Manager (UCM) Cloud.
-                                                He previously led the Webex Meetings business unit, where his team was responsible for several transformative initiatives, including the development of a single meetings platform architecture and modernization of the Webex experience.
-                                                Mr. Khan came to Cisco from Symantec where he served as Vice President of Enterprise and Consumer Security products.
-                                                Javed holds an MS in Computer Science and an MBA from the Anderson School of Management at UCLA. When he's not working, he enjoys spending time with his family in the San Francisco bay area.
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 36.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Gordon Thomson</h2>
-                                                    <h4>VP, EMEAR Architectures &amp; Specialists Sales</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Keynote Address – Cisco Cloud Experience</h6>
-                                                <p><strong>Profile:</strong>Gordon Thomson is the VP for EMEAR Specialist Sales at Cisco, part of the leadership team of Cisco's specialist sellers and architects for Network Infrastructure, Cloud and Collaboration.
-                                                A 23-year Cisco veteran, he develops and implements innovative go-to-market models that accelerate the shift to software selling and digital transformation, delivering revenue and building strong teams with long-term tenures. By combining his technological expertise and customer-first mindset, Thomson has achieved unrivaled success in designing sales strategies for the new software- and cloud-centered markets.
-                                                Thomson's legacy will be his belief in the power of people and teams to achieve powerful results through go-to-market innovation and high-trust relationships with customers.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 37.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Adele Trombetta</h2>
-                                                    <h4>Vice President CX MEA and<br>Technology Transformation</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Customer Experience in a Digital-First World</h6>
-                                                <p><strong>Profile:</strong>Adele Trombetta is a passionate and proven technology leader, a recognized transformation agent who employs automation, deploys new delivery models, and invests in front-end resources to accelerate growth. As vice president of Cisco Advanced Services in EMEAR, Adele leads service delivery and customer value creation in the region.
-                                                Her career to date includes leadership roles at DXC Consulting, a company formed by the combination of CSC Consulting and HPEnterprise Services, HPE Enterprise Services and IBM.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_security ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 26.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Hadil Ghaban</h2>
-                                                    <h4>Cyber Security Technical Solutions Specialist</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> SASE + SD-WAN</h6>
-                                                <p><strong>Profile:</strong> Hadil Ghaban is a Cyber Security Technical Solutions Specialist for the Middle East working with Global Security Specialist Organization GSSO at Cisco. She is responsible for empowering Cisco partners to provide their customers with the right solutions to assure business continuity and to meet their business needs. Hadil enables partners with knowledge about Cyber Security to increase and maximize their profitability through Cisco products and Services.
-                                                Hadil graduated from New York University with a Master's degree in Telecommunication Engineering and has a Bachelor's in Computer Science. Also, she held many Cisco Professional Certifications.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 25.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Mazen Al Jundi</h2>
-                                                    <h4>Technical Lead for Cisco Secure workload</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Secure Workload </h6>
-                                                <p><strong>Profile:</strong> Mazen Al Jundi, CCIE 29956
-                                                Cisco Systems - Dubai, United Arab Emirates.
-
-                                                Mazen Al Jundi is a Technical Lead for Cisco Secure workload (Formerly Tetration) part of Worldwide Secure Workload and Analytics Engineering covering Middle East and Africa.
-
-                                                With over 15 years of experience, in the ICT field, Mazen’s profound knowledge and experience has been of immense benefit to his customers digital transformation journey.
-
-                                                His love for knowledge sharing has helped others to discover their potentials, as he coaches them in ways to grow bigger and better in the world of IT.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                         <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 27.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Omar Ma’ayah</h2>
-                                                    <h4>Technical Solutions Architect</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> SecureX </h6>
-                                                <p><strong>Profile:</strong> Omar Maayah is a Technical Solutions Architect focusing on Cisco’s Security technologies, in UAE.
-                                                    Omar comes with 12+ years’ experience, joined Cisco UAE back in 2015 as a Product Specialist focusing on Secure Network Analytics covering Cisco Security Analytics in Middle East and Africa.
-                                                    In early 2018, Omar took on a Technical Solutions Architect role to drive Cisco's Security Sales activities in UAE supporting UAE’s public sector and Enterprise customers.
-                                                    Before Joining Cisco Omar worked as a Senior Network Admin in Abu Dhabi where he was able to achieve his CCIE R&amp;S certificate, then became a Senior Network Operations Engineer in Etisalat dedicated to manage and operate Etisalat’s International MPLS network and Internet PoPs, then worked as a Pre-Sales Engineer in Dimension Data.
-
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_cloud ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 28.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Alan Gerrish </h2>
-                                                    <h4>Technical Solutions Architect<br>Data Center &amp; Virtualization </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Cisco Hyperflex Innovations</h6>
-                                                <p><strong>Profile:</strong> Alan has been working with the EMEAR Cisco Data Center &amp; Virtualization team since joining the company in 2007. Primarily focusing on DC infrastructure switching &amp; Storage Networking. Then, Unified switching and Unified Computing platforms. Alan also has a major focus on both converged &amp; hyper-converged infrastructure technologies from Cisco, &amp; other strategic partners that incorporate all of these technologies.
-                                                As these offerings span multiple technologies &amp; disciplines, having a good understanding of Storage, Networking, Compute, Hypervisor &amp; Automation aspects is key to positioning this type of technology solution to partners and customers.
-
-                                                Alan has over 20 years of experience in the Data Center environment and has gained knowledge, both as a field engineer, technical instructor and as a technical consultant of various key technologies.&nbsp;
- 
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 29.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Bilal Sherrief </h2>
-                                                    <h4>Technical Solution Architect </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Nexus Dashboard &amp; Hybrid Cloud Networking</h6>
-                                                <p><strong>Profile:</strong> Bilal Sherrief is a Technical Solution Architect part of the Middle East and Africa Cloud Infrastructure and Software Group. 
-                                                Bilal joined Cisco in 2006 and over the years he has worked with organizations across the region in multiple verticals to 
-                                                understand some of their key business drivers and how technology can provide a platform to drive transformation and
-                                                enable business outcomes. 
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 30.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Sherif Medhat  </h2>
-                                                    <h4>Regional Channel Presales Engineer at Cisco </h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Application Performance Management with AppDynamics</h6>
-                                                <p><strong>Profile:</strong> Sherif is the Regional Channel Presales Engineer at Cisco AppDynamics leading MEA Business, providing world class pre-sales technical support to the channel partner presales teams and customers throughout the sales cycle on Application Monitoring on full stack of Technologies.
-                                                
-                                                Sherif has a total of 10 years of professional experience, previously worked at Microsoft as a Presales Engineer dedicated for Shifting Open-Source technologies to Azure,&nbsp;Business Analyst and Product Manager in Vodafone Group, 4 years as a Software Developer in ITWorx and Integrant (Microsoft Partners), built his own startups and worked as a Teaching Assistant in Faculty of Computer Science 
-                                                </p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_collaboration ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 31.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Fayroz Mehdi</h2>
-                                                    <h4>Sales Specialist - Collaboration<br> Architecture</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong></h6><h4>Collaboration Flex Plan – The Best way to buy meetings, team collaboration, calling, and contact center</h4>
-                                                <p><strong>Profile:</strong> Fayroz Mehdi joined Cisco via the WebEx&nbsp;acquisition back in 2007 which gave him early exposure to Cloud&nbsp;collaboration as technology area and&nbsp;SaaS as a business model.
-                                                As a virtual sales specialist he has sold WebEx widely into APAC and EMEA regions. In 2013 he moved to Qatar to align with MiddleEast territory where&nbsp;he successfully partnered with service providers to sell WebEx in&nbsp;order to overcome challenging VOIP restrictions.
-                                                In his most recent role he has been driving both on-prem and cloud collaboration business in Qatar with additional focus on enabling partners across Gulf. Fayroz holds a Bachelor of Commerce degree from Bangalore University and in his free time loves to&nbsp;hone his skills in his new found love for cooking.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 32.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Gawie Herholdt</h2>
-                                                    <h4>Technical Solutions Architect</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Web Cloud Connect UC</h6>
-                                                <p><strong>Profile:</strong> Gawie Herholdt is a Technical Solutions Architect for Cisco Collaboration solutions. He joined Cisco in 2007 and held various engineering positions in Cisco. He holds a Diploma in Information Technology from the University of South Africa and is an active Cisco CCIE with extensive knowledge and experience in Cisco Collaboration products and solutions. Outside of Cisco he enjoys recreational sailing, motorcycling and traveling.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/yamanhakmi.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Yaman Hakim</h2>
-                                                    <h4>System Engineering leader for Collaboration Technology</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Secure Remote Work</h6>
-                                                <p>Profile: Yaman is the system engineering leader for collaboration technology in Middle East &amp; Africa.   Yaman has over 16 years of industry experience in the ICT field.   In his current role, Yaman leads a team of technical solution architects, and works extensively with customers and partners on leveraging the Webex platform to drive strategic engagements, accelerate workspace transformation and advance customer engagement initiatives.  In a prior role, Yaman led the operations and engagement team at Cisco’s Innovation and Experience Center.  This included developing cutting-edge vertical journeys based on end user persona, leveraging business architecture &amp; programmability for integrating with ecosystem partners and driving the value proposition of these journeys towards achieving business outcomes.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bio_rooms bio_partner ">
-                                    <div class="total_tions_area">
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/ahmed_lubbad.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Ahmad Lubbad</h2>
-                                                    <h4>Customer Success Specialist - MEA</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> CX Customer Success &amp; Adoption</h6>
-                                                <p><strong> Profile:</strong>  Ahmad has close to 12 years of experience in networking domain with focus on Cisco products. During this time, he has moved among several roles in cisco such as Network consulting Engineer, Sales Solution architect and at the moment, He is a Customer Success Specialist covering middle east and Africa theatre.
-                                                Ahmad has expertise in design, implementation, and support of Cisco solutions. He is a routing and switching CCIE. His current technical focus is enterprise networking and Cisco DNA.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 34.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Stephanie Liu</h2>
-                                                    <h4>Global Lead Partner Digital Platform</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Black Belt – Expand Your Edge </h6>
-                                                <p><strong>Profile:</strong> Stephanie Liu is the Global Leader of Partner Performance and Experience for Cisco’s Global Partner Organization. She is leading a team defining the digital strategy and designing the capabilities to connect Cisco and Partners more effectively, increasing profitability, and driving growth.&nbsp;Recently, her team just launched Partner Experience Platform (PXP).&nbsp;Stephanie was recognized by CRN as 2020 Women in the Channel.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                        <div class="single_bios_area">
-                                            <div class="bios_area_header">
-                                                <div class="bions_images">
-                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 35.png" alt="">
-                                                </div>
-                                                <div class="bios_details">
-                                                    <h2>Pınar Yıldız Budakoğlu</h2>
-                                                    <h4>Software Specialist, MEA</h4>
-                                                </div>
-                                            </div>
-                                            <div class="bios_footers">
-                                                <h6><strong>Session:</strong> Session on EA</h6>
-                                                <p><strong>Profile:</strong> Pınar Yıldız Budakoğlu is currently part of the Software team responsible for Enterprise Agreements in Middle East and Africa. Her area of expertise, before moving to this role, has been Collaboration where she was leading Collaboration business in Turkey for more than 8 years. She joined Cisco in 2006 as a Systems Engineer and had several roles in the technical and channel teams. She has a Bachelor’s degree in Computer Science and completed her Executive MBA at Koç University. Pinar is a happy mother of a 5 years old boy, she lives in Dubai and loves dancing and Yoga.</p>
-                                                <a href="#" class="bio_read_more">Read More...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    
                     
                 </div>
             </div>
@@ -1773,7 +1084,7 @@
                         <div class="agenda_day_select " id="day-area-2">
                           <div class="educational-section row">
                             <div class="time col-2">
-                                <h3>time <br> (GMT +4)</h3>
+                                <h3>Time <br> (GMT +4)</h3>
                             </div>
                             <div class="educational-area col-10">
                               <h3>Auditorium Sessions</h3>
@@ -2886,28 +2197,13 @@
                 </div>
     </div>
 
-</div>
+</div>  
 
   <script src="../js/lobby.js" >
-
   </script>
-  <script src="../js/auditorium.js" >
-
+  <script src="../js/breakout-room-a.js" >
   </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
-<script  >
-    $(".bio_read_more").on("click", function () {
-    $(this).parent().toggleClass("showContent");
-
-    let replaceText = $(this).parent().hasClass("showContent") ? "Read less.." : "Read More...";
-    $(this).text(replaceText);  
-    });
-
-    
-
-  </script>
-
+  
 
   </body>
 </html>

@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!-- <link rel="stylesheet" href="../css/lobby.css" /> -->
+    <link rel="stylesheet" href="../css/auditorium.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auditorium - Cisco Gulf Partner Summit</title>
+  </head>
+  <body>
+    <div class="main-section">
+      <img src="../img/background-img.png" id="myImg" alt="background-img" />
+
+      <!-- Navbar-->
+      <div class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../img/logo.png" alt="logo" />
+        </div>
+
+        <!-- Navigaion links -->
+        <div class="links">
+          <ul>
+            <div class="btnstyle">
+              <li><a href="#">Agenda</a></li>
+            </div>
+            <div class="btnstyle">
+              <li><a href="lobby.html">Lobby</a></li>
+            </div>
+            <div class="btnstyle">
+              <li><a href="auditorium.html">Auditorium</a></li>
+            </div>
+            <div class="btnstyle">
+              <li><a href="networking-lounge.html">Networking Lounge</a></li>
+            </div>
+            <div class="btnstyle">
+              <li><a href="#">Feedback</a></li>
+            </div>
+            <div class="btnstyle">
+              <li><a href="#">Visit Distributors</a></li>
+            </div>
+          </ul>
+        </div>
+
+        <!-- Greeting Text -->
+        <div class="right-text">
+          <h3>
+            Hello,<br />
+            Abdul Razzaque
+          </h3>
+        </div>
+      </div>
+
+      <!-- Side Buttons -->
+      <div class="side-btns">
+        <div class="btns">
+          <div class="btn-1 btn-style">
+            <a href="#">Watch Day 1</a>
+          </div>
+
+          <div class="btn-2 btn-style">
+            <a href="#">Watch Day 2</a>
+          </div>
+
+          <div class="btn-3 btn-style">
+            <!-- Button trigger modal -->
+            <a
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              Speakers Bio
+            </a>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content modal-style">
+                  <div class="modal-header modal-style">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+
+                  <div class="modal-body modal-style">
+                    <div class="outerTabContainer">
+                      <div class="date">
+                        <div class="date-label">
+                          <div class="labeldiv">
+                            <p>Choose Day:</p>
+                          </div>
+                        </div>
+                        <div class="date-btns">
+                          <button class="date-btn-style" onclick="showPage(0)">
+                            Day 1 (April 6th
+                          </button>
+                          <button class="date-btn-style" onclick="showPage(1)">
+                            Day 2 (April 7th)
+                          </button>
+                        </div>
+                      </div>
+
+                      <!--
+                        page 1
+                      -->
+                      <div class="tabContainer">
+                        <div class="breakout-rooms">
+                          <div class="breakout-label">
+                            <div class="breakoutdiv">
+                              <p>Choose breakout rooms/Auditorium:</p>
+                            </div>
+                          </div>
+                          <div class="breakout-btns">
+                            <button
+                              class="br-btn-style active"
+                              onclick="showPanel(0)"
+                            >
+                              Audotirium
+                            </button>
+                            <button class="br-btn-style" onclick="showPanel(1)">
+                              Security
+                            </button>
+                            <button class="br-btn-style" onclick="showPanel(2)">
+                              Cloud & DC
+                            </button>
+                            <button class="br-btn-style" onclick="showPanel(3)">
+                              Collaboration
+                            </button>
+                            <button class="br-btn-style" onclick="showPanel(4)">
+                              Partner Programs
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- tab no 1-->
+                        <div class="card tabPanel">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/Shadi-Salama.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Shadi Salama</h2>
+                                  <p>Channel Lead - Gulf Region</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session:</b> Welcome Address</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Shadi Salama leads the Partner
+                                Organization across the Gulf Region in Middle
+                                East & Africa Theater. This team focuses on
+                                driving Cisco's Go To Market strategy and
+                                implementation across the wide. Additionally,
+                                they focus on how <span id="dots1">...</span
+                                ><span id="more1"
+                                  >they increase partner loyalty and
+                                  profitability. Shadi has spent the last 16
+                                  years in various roles within Cisco - from
+                                  Account management to key leadership
+                                  responsibilities. Today, his focus is on
+                                  driving the channel and the overall state of
+                                  regional Partner ecosystem within the Gulf
+                                  region.</span
+                                >
+                              </p>
+                              <button onclick="btn1()" id="myBtn1">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/Shukri Eid.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Shukri Eid</h2>
+                                  <p>
+                                    Managing Director – Gulf Region Cisco Middle
+                                    East
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Keynote Address – Future Ready
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Shukri Eid is Managing Director
+                                – Gulf Region, at Cisco Middle East. In his
+                                current role, Shukri heads Cisco’s business and
+                                operations across <span id="dots2">...</span
+                                ><span id="more2"
+                                  >Afghanistan, Bahrain, Kuwait, Oman, Pakistan,
+                                  Qatar, UAE and Yemen. With a key focus on
+                                  digitization and the Internet of Things,
+                                  Shukri is helping drive Cisco’s digital
+                                  agenda, competitive positioning and business
+                                  strategy across the markets he oversees. A
+                                  Cisco veteran of 13 years, Shukri’s
+                                  responsibilities include driving Cisco’s
+                                  strategy across his markets to ensure
+                                  execution on business objectives, in addition
+                                  to forging close relationships with
+                                  governments, customers and channel ecosystem
+                                  partners. He is valued for building
+                                  results-oriented and enthusiastic teams and as
+                                  a hands-on client and partner executive.
+                                  Shukri has established himself as a thought
+                                  leader and agent of change in fast-evolving,
+                                  dynamic markets, and is known for his
+                                  deliberate, strategic approach to complex
+                                  challenges, his authenticity and his people
+                                  management skills. Shukri has worked in
+                                  several capacities across the organization and
+                                  possesses deep industry knowledge and a
+                                  profound appreciation for the impact and
+                                  opportunities presented by digitization. Most
+                                  recently, he was Managing Director – East
+                                  Region, Cisco Middle East, and previously
+                                  Senior Director at the Country Digitization
+                                  Acceleration (CDA) team in Europe, Middle
+                                  East, Africa, Russia and CIS, where he worked
+                                  with government and industry leaders to
+                                  accelerate the national digitization
+                                  strategies. Prior to that, he led a diverse
+                                  team of senior consulting professionals as
+                                  Director of Cisco Consulting Services in
+                                  Emerging Markets. Shukri is a Cisco Leadership
+                                  Pipeline Program alumnus and has over 19 years
+                                  of business and technology consulting
+                                  experience, notably in strategy development
+                                  and implementation. He worked with senior
+                                  officials and executives to help them develop
+                                  and lead digital transformation strategies and
+                                  business models. Prior to Cisco, Shukri held
+                                  senior roles at IBM Global Business Services
+                                  and PricewaterhouseCoopers, where he led
+                                  high-profile strategy and IT transformational
+                                  engagements in the Middle East and North
+                                  Africa. Shukri has a master’s degree in
+                                  business administration from Strathclyde
+                                  University and a bachelor’s degree in
+                                  electrical and computer engineering from
+                                  Jordan University of Science and Technology.
+                                  He has tutored EMBA students on Exploring
+                                  International Business Environment and Future
+                                  Scenarios Planning, and is a regular guest
+                                  speaker at industry forums and academic
+                                  institutions.</span
+                                >
+                              </p>
+                              <button onclick="btn2()" id="myBtn2">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/Reem Assad.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Reem Asaad</h2>
+                                  <p>
+                                    Vice President <br />
+                                    Middle East and Africa, Cisco
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Keynote Address – An Inclusive
+                                Future For All
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Reem has a wealth of experience
+                                in business leadership and strong understanding
+                                of the digital transformation landscape. Prior
+                                to joining Cisco, <span id="dots3">...</span
+                                ><span id="more3"
+                                  >Asaad held the position of CEO at Raya
+                                  Contact Center, a business process outsourcing
+                                  service provider based in Cairo with
+                                  operations in Europe, Middle East, and Africa,
+                                  servicing multi-national and Fortune 500
+                                  companies. During this role, she was
+                                  instrumental in driving the company growth and
+                                  go-to-market strategy, digital transformation,
+                                  and regional market development.</span
+                                >
+                              </p>
+                              <button onclick="btn3()" id="myBtn3">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-4 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/Dobeel.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Elisabeth De Dobbeleer</h2>
+                                  <p>VP, EMEAR Partner Organization</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Keynote Address – Agile,
+                                Relevant & Profitable
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Elisabeth is Cisco EMEA’s
+                                partner organization leader and has
+                                responsibility for developing strategic
+                                initiatives and program innovations with
+                                <span id="dots4">...</span
+                                ><span id="more4"
+                                  >Cisco’s EMEA channel partners to grow a
+                                  profitable business together. She has spent
+                                  eighteen years at Cisco in a variety of global
+                                  and regional roles, leveraging her legal
+                                  background, but also her change agent,
+                                  operational and business development
+                                  skills.</span
+                                >
+                              </p>
+                              <button onclick="btn4()" id="myBtn4">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-5 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img
+                                    src="../img/adele trombeetta.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Adele Trombetta</h2>
+                                  <p>
+                                    Vice President CX MEA and <br />
+                                    Technology Transformation
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session:</b> Customer Experience in a
+                                Digital-First World
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Adele Trombetta is a passionate
+                                and proven technology leader, a recognized
+                                transformation agent who employs automation,
+                                deploys new <span id="dots5">...</span
+                                ><span id="more5"
+                                  >delivery models, and invests in front-end
+                                  resources to accelerate growth. As vice
+                                  president of Cisco Advanced Services in EMEAR,
+                                  Adele leads service delivery and customer
+                                  value creation in the region. Her career to
+                                  date includes leadership roles at DXC
+                                  Consulting, a company formed by the
+                                  combination of CSC Consulting and HPEnterprise
+                                  Services, HPE Enterprise Services and
+                                  IBM.</span
+                                >
+                              </p>
+                              <button onclick="btn5()" id="myBtn5">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 2-->
+                        <div class="card tabPanel">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.2a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Rami Abbas</h2>
+                                  <p>
+                                    Regional Technology Incubation
+                                    Specialist/Lead
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b>SASE + SD-WAN</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Rami Abbas is an IT industry
+                                veteran with close to 10 years of experience in
+                                the Cyber Security space. Rami currently leads
+                                Cisco cloud <span id="dots1b">...</span
+                                ><span id="more1b"
+                                  >Security across the Middle East. Before
+                                  joining Cisco, Rami held positions at
+                                  different Cyber Security Industry leaders. He
+                                  brings with him a strong experience in the
+                                  space of Manager Cyber Security as he worked
+                                  for multiple years at leading Service
+                                  Providers in the region.</span
+                                >
+                              </p>
+                              <button onclick="btn1b()" id="myBtn1b">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.2b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Ahmad Chehime</h2>
+                                  <p>
+                                    Regional Technology Incubation
+                                    Specialist/Lead
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Cisco Microsegmentation and
+                                Workload Protection
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Ahmad Chehime is a Regional
+                                Technology Incubation Specialist/Lead –
+                                currently leading Cisco's Secure Workload
+                                (Formerly Tetration) and Network
+                                <span id="dots2b">...</span
+                                ><span id="more2b"
+                                  >Analytics (Stealthwatch) Products Portfolio
+                                  and customer adoption across Middle East and
+                                  Africa Ahmad is a 21 year Cisco veteran,
+                                  joined Cisco USA in San Jose, California in
+                                  early 2000 as a Technical Marketing Engineer
+                                  focusing on Service Providers Leased-Lines and
+                                  Broadband Aggregation Architectures. Worked
+                                  closely with major Service Providers Worldwide
+                                  and has extensive experience in Service
+                                  Provider infrastructure deployments. In early
+                                  2006, Ahmad took on a Product Management role
+                                  to drive Cisco's next generation Mid-range
+                                  router portfolio ASR 1000 and Cisco 7x00
+                                  business at a global level. In that role,
+                                  Ahmad led the new Cisco ASR-1000 product
+                                  family’ full product development lifecycle. In
+                                  2009, Ahmad moved to Saudi Arabia and joined
+                                  Cisco KSA and led a team of Systems and
+                                  Network Consultant Engineers to design network
+                                  infrastructure blueprints for Mega-Cities
+                                  projects. A year later Ahmad worked closely
+                                  with the incumbent service provider in KSA;
+                                  STC on various major projects, MPLS Backbone,
+                                  Broadband Aggregation, IPTV, and International
+                                  PoPs whole-sale transport services. In early
+                                  2014, Ahmad moved to Dubai, UAE and has been
+                                  representing Cisco World-Wide New Technologies
+                                  Incubation Team. Working closely with our
+                                  customers to make their Digital Transformation
+                                  journey a reality by evangelizing the Cisco’s
+                                  Next-Generation DC SDN Architecture, Secure
+                                  Workload and Analytics strategy.</span
+                                >
+                              </p>
+                              <button onclick="btn2b()" id="myBtn2b">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.2c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Mahmoud Rabi</h2>
+                                  <p>Cyber Security Specialist</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b>SecureX</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Mahmoud is a cyber security
+                                specialist working for Cisco Systems. He has
+                                over 15 years experience in the Cybersecurity
+                                domain with focus on <span id="dots3b">...</span
+                                ><span id="more3b"
+                                  >advanced threats prevention and next
+                                  generation security solutions. Mahmoud has
+                                  worked for several cyber security focused
+                                  vendors across Middle East and Africa.
+                                  Currently, Mahmoud is leading Cisco security
+                                  business for UAE Enterprise and Public
+                                  Sector.</span
+                                >
+                              </p>
+                              <button onclick="btn3b()" id="myBtn3b">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 3-->
+                        <div class="card tabPanel">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.3a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Bilal Sherrief</h2>
+                                  <p>Technical Solution Architect</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Nexus Dashboard & Hybrid Cloud
+                                Networking
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Bilal Sherrief is a Technical
+                                Solution Architect part of the Middle East and
+                                Africa Cloud Infrastructure and Software Group.
+                                Bilal joined Cisco in 2006
+                                <span id="dots1c">...</span
+                                ><span id="more1c"
+                                  >and over the years he has worked with
+                                  organizations across the region in multiple
+                                  verticals to understand some of their key
+                                  business drivers and how technology can
+                                  provide a platform to drive transformation and
+                                  enable business outcomes.</span
+                                >
+                              </p>
+                              <button onclick="btn1c()" id="myBtn1c">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.3b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Mazen Abou Najm</h2>
+                                  <p>
+                                    Cloud Infrastructure and Software Group
+                                    (CISG) Leader
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Intersight: Hybrid Cloud
+                                Platform
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Mazen Abou Najm leads the Cloud
+                                Infrastructure & Software Group (CISG)
+                                architecture organization in Middle East &
+                                Africa. This team focuses on
+                                <span id="dots2c">...</span
+                                ><span id="more2c"
+                                  >Cisco’s Application Experience, Hybrid Cloud
+                                  Networking, and Compute, Storage, and DC
+                                  Software solutions. Mazen is currently based
+                                  in Dubai, he has been working with Cisco since
+                                  2010 across different countries and roles in
+                                  systems engineering and architecture sales. He
+                                  holds certifications from Cisco, VMware, AWS,
+                                  and enjoys working with customers and partners
+                                  to build innovative DC & Cloud
+                                  solutions.</span
+                                >
+                              </p>
+                              <button onclick="btn2c()" id="myBtn2c">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.3c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Karim Hindawi</h2>
+                                  <p>Channel Manager - MEA</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Intersight: Cisco Observability
+                                Platform
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Karim Hindawi is the channel
+                                manager at Middle East and Africa working in
+                                AppDynamics. <span id="dots3c">...</span
+                                ><span id="more3c"
+                                  >A subject matter expert, Karim covers the
+                                  portfolio off AppDynamics which is Designed
+                                  for production and pre-production environments
+                                  and giving customers visibility on their
+                                  entire application topology from a single pane
+                                  of glass. Karim covers the areas of:
+                                  Application Performance Management Monitor and
+                                  manage end-to-end performance of complex
+                                  distributed applications. End User Monitoring
+                                  Deliver a better user experience with Mobile
+                                  and Browser Real-User Monitoring and Browser
+                                  Synthetic Monitoring. Infrastructure
+                                  Visibility Unlock deeper insights by
+                                  correlating server and database performance
+                                  with application performance. Real-time
+                                  Business Monitoring Get real-time business
+                                  awareness into IT operations, customer
+                                  experience, and business outcomes with
+                                  Transaction, Log, Browser, and Mobile
+                                  Analytics.</span
+                                >
+                              </p>
+                              <button onclick="btn3c()" id="myBtn3c">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 4-->
+                        <div class="card tabPanel">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.4a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>George Gharios</h2>
+                                  <p>Sales Specialist</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Delivering the Future of
+                                Customer Experience
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>George Joined Cisco Advanced
+                                Servers in 2007 as Contact Center Consulting
+                                Engineer. During his work in Cisco services
+                                George Led multiple <span id="dots1d">...</span
+                                ><span id="more1d"
+                                  >account transformations by understanding,
+                                  identifying gaps, working with customers,
+                                  account teams and services organization to
+                                  propose and implement comprehensive solutions.
+                                  George played a key role in creating multiple
+                                  Services opportunities as well as leading
+                                  complex delivery engagements by working
+                                  internally and with different Cisco partners
+                                  to meet the challenging customer requirements.
+                                  Then in December 2020, George Joined the
+                                  Contact Center Sales Specialist team covering
+                                  Middle East and Africa.</span
+                                >
+                              </p>
+                              <button onclick="btn1d()" id="myBtn1d">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.4b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Fabien Habbouche</h2>
+                                  <p>Collaboration Sales Specialist</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Return to Office – Supporting
+                                your new Hybrid workforce
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Fabien, a skilled network
+                                consultant with an outstanding background in
+                                network design and implementation, has close to
+                                14 years of experience in the
+                                <span id="dots2d">...</span
+                                ><span id="more2d"
+                                  >networking domain with a focus on Cisco’s
+                                  Collaboration technologies. Fabien started his
+                                  career with Cisco in 2015 as a Smart Cities
+                                  Consultant. Shortly after that, he moved to
+                                  become an Enterprise Account SE covering
+                                  retail, transport and logistics and oil and
+                                  gas customers. Fabien is currently a
+                                  Collaboration Sales Specialist covering UAE,
+                                  Oman and Pakistan. Fabien has a bachelor’s
+                                  degree in Computer and Communications
+                                  Engineering. His passion and area of interest
+                                  has always been around Cisco’s Collaboration
+                                  technologies. Fabien has also achieved his
+                                  CCIE in Collaboration back in 2010.</span
+                                >
+                              </p>
+                              <button onclick="btn2d()" id="myBtn2d">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.4c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Yaman Hakmi</h2>
+                                  <p>
+                                    System Engineering Leader for <br />
+                                    Collaboration Technology
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b> Secure Remote Work</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Yaman is the system engineering
+                                leader for collaboration technology in Middle
+                                East & Africa. Yaman has over 16 years of
+                                industry experience in the ICT
+                                <span id="dots3d">...</span
+                                ><span id="more3d"
+                                  >field. In his current role, Yaman leads a
+                                  team of technical solution architects, and
+                                  works extensively with customers and partners
+                                  on leveraging the Webex platform to drive
+                                  strategic engagements, accelerate workspace
+                                  transformation and advance customer engagement
+                                  initiatives. In a prior role, Yaman led the
+                                  operations and engagement team at Cisco’s
+                                  Innovation and Experience Center. This
+                                  included developing cutting-edge vertical
+                                  journeys based on end user persona, leveraging
+                                  business architecture & programmability for
+                                  integrating with ecosystem partners and
+                                  driving the value proposition of these
+                                  journeys towards achieving business outcomes.
+                                </span>
+                              </p>
+                              <button onclick="btn3d()" id="myBtn3d">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 5-->
+                        <div class="card tabPanel">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.5a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Shaheen Niloufer</h2>
+                                  <p>
+                                    Partner Business Development <br />
+                                    Specialist, Gulf
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> CX PROFITABILITY - Programs &
+                                Specialisation
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Shaheen has over 10 years of
+                                partner services and customer experience channel
+                                management career across Gulf and Middle East
+                                <span id="dots1e">...</span
+                                ><span id="more1e"
+                                  >for Cisco partners and distributors. During
+                                  her time at Cisco she has moved from different
+                                  roles from distribution to direct and partner
+                                  sales management Currently she’s a Partner
+                                  Business Development Specialist for the Gulf
+                                  region driving lifecycle transformation for
+                                  strategic partners and driving their overall
+                                  profitability for the CX practice Shaheen has
+                                  driven a successful CX transformation practice
+                                  by pivoting the strategic Gulf partners from
+                                  traditional sales models to an organization
+                                  that now focuses on the success of our
+                                  customers and partner profitability.</span
+                                >
+                              </p>
+                              <button onclick="btn1e()" id="myBtn1e">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.5b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Stephanie Liu</h2>
+                                  <p>Global Lead Partner Digital Platform</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>CX PROFITABILITY – Partner
+                                experience Platform (PXP)
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Stephanie Liu is the Global
+                                Leader of Partner Performance and Experience for
+                                Cisco’s Global Partner Organization. She is
+                                <span id="dots2e">...</span
+                                ><span id="more2e"
+                                  >leading a team defining the digital strategy
+                                  and designing the capabilities to connect
+                                  Cisco and Partners more effectively,
+                                  increasing profitability, and driving growth.
+                                  Recently, her team just launched Partner
+                                  Experience Platform (PXP). Stephanie was
+                                  recognized by CRN as 2020 Women in the
+                                  Channel.</span
+                                >
+                              </p>
+                              <button onclick="btn2e()" id="myBtn2e">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/1.5c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Deema Abdullah</h2>
+                                  <p>
+                                    Partner Account Manager, <br />
+                                    Cisco Partner Profitability Programs SME
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Partner Profitability Programs
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b> Based in Dubai, United Arab
+                                Emirates - Deema is a graduate of the Cisco
+                                Sales Associate Program in Amsterdam, and is
+                                currently <span id="dots3e">...</span
+                                ><span id="more3e"
+                                  >managing System Integrators in the UAE. She
+                                  is also leading the Profitability Programs for
+                                  the Gulf region, with a deep understanding of
+                                  how partners can better utilise the programs
+                                  and ensure they are maximising on the possible
+                                  rebates they can earn with Cisco. Deema
+                                  Abdullah.</span
+                                >
+                              </p>
+                              <button onclick="btn3e()" id="myBtn3e">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--
+                        page 2
+                      -->
+
+                      <div class="tabContainer">
+                        <div class="breakout-rooms">
+                          <div class="breakout-label">
+                            <div class="breakoutdiv">
+                              <p>Choose breakout rooms/Auditorium:</p>
+                            </div>
+                          </div>
+                          <div class="breakout-btns-b">
+                            <button
+                              class="br-btn-style"
+                              onclick="showPanelb(0)"
+                            >
+                              Audotirium
+                            </button>
+                            <button
+                              class="br-btn-style"
+                              onclick="showPanelb(1)"
+                            >
+                              Security
+                            </button>
+                            <button
+                              class="br-btn-style"
+                              onclick="showPanelb(2)"
+                            >
+                              Cloud & DC
+                            </button>
+                            <button
+                              class="br-btn-style"
+                              onclick="showPanelb(3)"
+                            >
+                              Collaboration
+                            </button>
+                            <button
+                              class="br-btn-style"
+                              onclick="showPanelb(4)"
+                            >
+                              Partner Programs
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- tab no 1-->
+                        <div class="card tabPanel-b">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/Shadi-Salama.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Shadi Salama</h2>
+                                  <p>Channel Lead - Gulf Region</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b> Welcome Address</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Shadi Salama leads the Partner
+                                Organization across the Gulf Region in Middle
+                                East & Africa Theater. This team focuses on
+                                driving Cisco's Go To Market strategy and
+                                implementation across the wide. Additionally,
+                                they focus on how <span id="dots1p2a">...</span
+                                ><span id="more1p2a"
+                                  >they increase partner loyalty and
+                                  profitability. Shadi has spent the last 16
+                                  years in various roles within Cisco - from
+                                  Account management to key leadership
+                                  responsibilities. Today, his focus is on
+                                  driving the channel and the overall state of
+                                  regional Partner ecosystem within the Gulf
+                                  region.</span
+                                >
+                              </p>
+                              <button onclick="btn1p2a()" id="myBtn1p2a">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.1b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Abdelilah Nejjari</h2>
+                                  <p>
+                                    Chief Operating Officer and Partner Lead for
+                                    Cisco <br />
+                                    Middle East and Africa
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Keynote Address – Commitment to
+                                Partner Succes
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>He is in charge of planning and
+                                executing on Cisco’s operational policies,
+                                Go-To-Market strategies and priorities as well
+                                as leading the partner
+                                <span id="dots2p2a">...</span
+                                ><span id="more2p2a"
+                                  >organization across MEA. By virtue of his 25
+                                  years career, he has brought to his position a
+                                  well-established background in the IT industry
+                                  and in professional services. By developing
+                                  and designing an ongoing management of MEA
+                                  Partner Strategy, Abdelilah is ensuring a
+                                  strong blueprint and execution of our evolving
+                                  selling motions, shifting Cisco’s and its
+                                  Partners focus in the region, to Software &
+                                  Subscriptions based offerings. Abdelilah is
+                                  driven by his ultimate desire: Enable our
+                                  Partners, by developing mutual performance
+                                  objectives, to deliver value to Cisco
+                                  customers in their digital journey, and to
+                                  implement an innovative, robust and secure IT
+                                  environment in the region. He first joined
+                                  Cisco, 12 years ago, as a
+                                  Commercial/Enterprise Segment lead covering
+                                  Morocco and achieved great results in his
+                                  first year. He was then promoted as a Regional
+                                  Sales Manager for Commercial Segment for
+                                  North, West and Central Africa, establishing
+                                  and driving with dynamism Sales and GTM
+                                  strategies. In his most recent role before
+                                  taking his current responsibilities, Abdelilah
+                                  was Cisco’s General Manager for North & West
+                                  Central Africa for more than 4 years, during
+                                  which time he demonstrated ability to build
+                                  and manage profitable business, while engaging
+                                  and retaining high profile relationships with
+                                  the local and global organizations, in both
+                                  public and private sectors. Prior to joining
+                                  Cisco, Abdelilah spent more than a 15 years in
+                                  IT Senior Management roles within notable IT
+                                  system integrators in Morocco. With an
+                                  entrepreneurship aspirations since the
+                                  beginning of his career, he created and
+                                  launched in 2003 his own IT Services Company,
+                                  focusing on Infrastructure Services, Technical
+                                  Support and Training. The company developed to
+                                  become Number 1 in its field in Morocco, and
+                                  was, subsequently, acquired by one of the
+                                  major IT companies in the region. Abdelilah
+                                  graduated from Ecole Mohammedia des
+                                  Ingenieurs, with an Engineer in Computer
+                                  Science degree. He is based in Dubai, married
+                                  with 4 children.</span
+                                >
+                              </p>
+                              <button onclick="btn2p2a()" id="myBtn2p2a">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.1c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Javed Khan</h2>
+                                  <p>SVP & General Manager – Collaboration</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Keynote Address – The All New
+                                WebEx
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Javed Khan is Senior Vice
+                                President and General Manager of Cisco
+                                Collaboration. He leads Cisco’s
+                                multi-billion-dollar Collaboration business
+                                <span id="dots3p2a">...</span
+                                ><span id="more3p2a"
+                                  >which includes the award-winning Webex
+                                  portfolio of Meetings, Teams, Rooms, Calling,
+                                  and Contact Center. Javed has a passion for
+                                  delivering amazing team collaboration
+                                  experiences and brings 20+ years of enterprise
+                                  and consumer product leadership to Cisco.
+                                  Prior to this position, Javed was running
+                                  Cisco’s Cloud Calling business as the Vice
+                                  President and General Manager. He and his team
+                                  were responsible for the strategy and
+                                  execution of product management, development
+                                  and partner operations for the Cisco Cloud
+                                  Calling Portfolio. This includes Webex
+                                  Calling, Cisco BroadWorks-based solutions,
+                                  Cisco Hosted Collaboration Solution (HCS) and
+                                  Cisco Unified Communications Manager (UCM)
+                                  Cloud. He previously led the Webex Meetings
+                                  business unit, where his team was responsible
+                                  for several transformative initiatives,
+                                  including the development of a single meetings
+                                  platform architecture and modernization of the
+                                  Webex experience. Mr. Khan came to Cisco from
+                                  Symantec where he served as Vice President of
+                                  Enterprise and Consumer Security products.
+                                  Javed holds an MS in Computer Science and
+                                  an MBA from the Anderson School of Management
+                                  at UCLA. When he's not working, he enjoys
+                                  spending time with his family in the San
+                                  Francisco bay area.</span
+                                >
+                              </p>
+                              <button onclick="btn3p2a()" id="myBtn3p2a">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-4 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.1d.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Gordon Thomson</h2>
+                                  <p>
+                                    VP, EMEAR Architectures & Specialists Sales
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Keynote Address – Cisco Cloud
+                                Experience
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Gordon Thomson is the VP for
+                                EMEAR Specialist Sales at Cisco, part of the
+                                leadership team of Cisco's specialist sellers
+                                and architects for Network
+                                <span id="dots4p2a">...</span
+                                ><span id="more4p2a"
+                                  >Infrastructure, Cloud and Collaboration. A
+                                  23-year Cisco veteran, he develops and
+                                  implements innovative go-to-market models that
+                                  accelerate the shift to software selling and
+                                  digital transformation, delivering revenue and
+                                  building strong teams with long-term tenures.
+                                  By combining his technological expertise and
+                                  customer-first mindset, Thomson has achieved
+                                  unrivaled success in designing sales
+                                  strategies for the new software- and
+                                  cloud-centered markets. Thomson's legacy will
+                                  be his belief in the power of people and teams
+                                  to achieve powerful results through
+                                  go-to-market innovation and high-trust
+                                  relationships with customers.</span
+                                >
+                              </p>
+                              <button onclick="btn4p2a()" id="myBtn4p2a">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-5 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.1e.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Adele Trombetta</h2>
+                                  <p>
+                                    Vice President CX MEA and <br />
+                                    Technology Transformation
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Customer Experience in a
+                                Digital-First World
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Adele Trombetta is a passionate
+                                and proven technology leader, a recognized
+                                transformation agent who employs automation,
+                                deploys new <span id="dots5p2a">...</span
+                                ><span id="more5p2a"
+                                  >delivery models, and invests in front-end
+                                  resources to accelerate growth. As vice
+                                  president of Cisco Advanced Services in EMEAR,
+                                  Adele leads service delivery and customer
+                                  value creation in the region. Her career to
+                                  date includes leadership roles at DXC
+                                  Consulting, a company formed by the
+                                  combination of CSC Consulting and HPEnterprise
+                                  Services, HPE Enterprise Services and
+                                  IBM.</span
+                                >
+                              </p>
+                              <button onclick="btn5p2a()" id="myBtn5p2a">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 2-->
+                        <div class="card tabPanel-b">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.2a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Hadil Ghaban</h2>
+                                  <p>
+                                    Cyber Security Technical Solutions
+                                    Specialist
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b>SASE + SD-WAN</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Hadil Ghaban is a Cyber Security
+                                Technical Solutions Specialist for the Middle
+                                East working with Global Security Specialist
+                                Organization GSSO at
+                                <span id="dots1p2b">...</span
+                                ><span id="more1p2b"
+                                  >Cisco. She is responsible for empowering
+                                  Cisco partners to provide their customers with
+                                  the right solutions to assure business
+                                  continuity and to meet their business needs.
+                                  Hadil enables partners with knowledge about
+                                  Cyber Security to increase and maximize their
+                                  profitability through Cisco products and
+                                  Services. Hadil graduated from New York
+                                  University with a Master's degree in
+                                  Telecommunication Engineering and has a
+                                  Bachelor's in Computer Science. Also, she held
+                                  many Cisco Professional Certifications.</span
+                                >
+                              </p>
+                              <button onclick="btn1p2b()" id="myBtn1p2b">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.2b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Mazen Al Jundi</h2>
+                                  <p>
+                                    Technical Lead for Cisco Secure workload
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b> Secure Workload</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Mazen Al Jundi, CCIE 29956 Cisco
+                                Systems - Dubai, United Arab Emirates. Mazen Al
+                                Jundi is a Technical Lead for Cisco Secure
+                                workload <span id="dots2p2b">...</span
+                                ><span id="more2p2b"
+                                  >(Formerly Tetration) part of Worldwide Secure
+                                  Workload and Analytics Engineering covering
+                                  Middle East and Africa. With over 15 years of
+                                  experience, in the ICT field, Mazen’s profound
+                                  knowledge and experience has been of immense
+                                  benefit to his customers digital
+                                  transformation journey. His love for knowledge
+                                  sharing has helped others to discover their
+                                  potentials, as he coaches them in ways to grow
+                                  bigger and better in the world of IT.</span
+                                >
+                              </p>
+                              <button onclick="btn2p2b()" id="myBtn2p2b">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.2c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Omar Ma’ayah</h2>
+                                  <p>Technical Solutions Architecto</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b> SecureX</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Omar Maayah is a Technical
+                                Solutions Architect focusing on Cisco’s Security
+                                technologies, in UAE. Omar comes with 12+ years’
+                                experience, joined <span id="dots3p2b">...</span
+                                ><span id="more3p2b"
+                                  >Cisco UAE back in 2015 as a Product
+                                  Specialist focusing on Secure Network
+                                  Analytics covering Cisco Security Analytics in
+                                  Middle East and Africa. In early 2018, Omar
+                                  took on a Technical Solutions Architect role
+                                  to drive Cisco's Security Sales activities in
+                                  UAE supporting UAE’s public sector and
+                                  Enterprise customers. Before Joining Cisco
+                                  Omar worked as a Senior Network Admin in Abu
+                                  Dhabi where he was able to achieve his CCIE
+                                  R&S certificate, then became a Senior Network
+                                  Operations Engineer in Etisalat dedicated to
+                                  manage and operate Etisalat’s International
+                                  MPLS network and Internet PoPs, then worked as
+                                  a Pre-Sales Engineer in Dimension Data.</span
+                                >
+                              </p>
+                              <button onclick="btn3p2b()" id="myBtn3p2b">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 3-->
+                        <div class="card tabPanel-b">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.3a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Alan Gerrish</h2>
+                                  <p>
+                                    Technical Solutions Architect <br />
+                                    Data Center & Virtualization
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b>Cisco Hyperflex Innovations</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Alan has been working with the
+                                EMEAR Cisco Data Center & Virtualization team
+                                since joining the company in 2007. Primarily
+                                focusing on DC <span id="dots1p2c">...</span
+                                ><span id="more1p2c"
+                                  >infrastructure switching & Storage
+                                  Networking. Then, Unified switching and
+                                  Unified Computing platforms. Alan also has a
+                                  major focus on both converged &
+                                  hyper-converged infrastructure technologies
+                                  from Cisco, & other strategic partners that
+                                  incorporate all of these technologies. As
+                                  these offerings span multiple technologies &
+                                  disciplines, having a good understanding of
+                                  Storage, Networking, Compute, Hypervisor &
+                                  Automation aspects is key to positioning this
+                                  type of technology solution to partners and
+                                  customers. Alan has over 20 years of
+                                  experience in the Data Center environment and
+                                  has gained knowledge, both as a field
+                                  engineer, technical instructor and as a
+                                  technical consultant of various key
+                                  technologies.</span
+                                >
+                              </p>
+                              <button onclick="btn1p2c()" id="myBtn1p2c">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.3b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Bilal Sherrief</h2>
+                                  <p>Technical Solution Architect</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Nexus Dashboard & Hybrid Cloud
+                                Networking
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Bilal Sherrief is a Technical
+                                Solution Architect part of the Middle East and
+                                Africa Cloud Infrastructure and Software Group.
+                                Bilal joined Cisco in 2006
+                                <span id="dots2p2c">...</span
+                                ><span id="more2p2c"
+                                  >and over the years he has worked with
+                                  organizations across the region in multiple
+                                  verticals to understand some of their key
+                                  business drivers and how technology can
+                                  provide a platform to drive transformation and
+                                  enable business outcomes.</span
+                                >
+                              </p>
+                              <button onclick="btn2p2c()" id="myBtn2p2c">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.3c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Sherif Medhat</h2>
+                                  <p>
+                                    Vice President <br />
+                                    Middle East and Africa, Cisco
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Application Performance
+                                Management with AppDynamics
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Sherif is the Regional Channel
+                                Presales Engineer at Cisco AppDynamics leading
+                                MEA Business, providing world class pre-sales
+                                technical support to the
+                                <span id="dots3p2c">...</span
+                                ><span id="more3p2c"
+                                  >channel partner presales teams and customers
+                                  throughout the sales cycle on Application
+                                  Monitoring on full stack of Technologies.
+                                  Sherif has a total of 10 years of professional
+                                  experience, previously worked at Microsoft as
+                                  a Presales Engineer dedicated for Shifting
+                                  Open-Source technologies to Azure, Business
+                                  Analyst and Product Manager in Vodafone Group,
+                                  4 years as a Software Developer in ITWorx and
+                                  Integrant (Microsoft Partners), built his own
+                                  startups and worked as a Teaching Assistant in
+                                  Faculty of Computer Science.</span
+                                >
+                              </p>
+                              <button onclick="btn3p2c()" id="myBtn3p2c">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 4-->
+                        <div class="card tabPanel-b">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.4a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Fayroz Mehdi</h2>
+                                  <p>
+                                    Sales Specialist - Collaboration
+                                    Architecture
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b> Collaboration Flex Plan – The
+                                Best way to buy meetings, team collaboration,
+                                calling, and contact center
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Fayroz Mehdi joined Cisco via
+                                the WebEx acquisition back in 2007 which gave
+                                him early exposure to Cloud collaboration as
+                                technology area <span id="dots1p2d">...</span
+                                ><span id="more1p2d"
+                                  >and SaaS as a business model. As a virtual
+                                  sales specialist he has sold WebEx widely into
+                                  APAC and EMEA regions. In 2013 he moved to
+                                  Qatar to align with MiddleEast territory where
+                                  he successfully partnered with service
+                                  providers to sell WebEx in order to overcome
+                                  challenging VOIP restrictions. In his most
+                                  recent role he has been driving both on-prem
+                                  and cloud collaboration business in Qatar with
+                                  additional focus on enabling partners across
+                                  Gulf. Fayroz holds a Bachelor of Commerce
+                                  degree from Bangalore University and in his
+                                  free time loves to hone his skills in his new
+                                  found love for cooking.</span
+                                >
+                              </p>
+                              <button onclick="btn1p2d()" id="myBtn1p2d">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.4b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Gawie Herholdt</h2>
+                                  <p>Technical Solutions Architect</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b>Web Cloud Connect UC</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Gawie Herholdt is a Technical
+                                Solutions Architect for Cisco Collaboration
+                                solutions. He joined Cisco in 2007 and held
+                                various engineering
+                                <span id="dots2p2d">...</span
+                                ><span id="more2p2d"
+                                  >positions in Cisco. He holds a Diploma in
+                                  Information Technology from the University of
+                                  South Africa and is an active Cisco CCIE with
+                                  extensive knowledge and experience in Cisco
+                                  Collaboration products and solutions. Outside
+                                  of Cisco he enjoys recreational sailing,
+                                  motorcycling and traveling.</span
+                                >
+                              </p>
+                              <button onclick="btn2p2d()" id="myBtn2p2d">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.4c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Yaman Hakim</h2>
+                                  <p>
+                                    System Engineering leader for Collaboration
+                                    Technology
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b> Secure Remote Work</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Yaman is the system engineering
+                                leader for collaboration technology in Middle
+                                East & Africa. Yaman has over 16 years of
+                                industry experience in the ICT
+                                <span id="dots3p2d">...</span
+                                ><span id="more3p2d"
+                                  >field. In his current role, Yaman leads a
+                                  team of technical solution architects, and
+                                  works extensively with customers and partners
+                                  on leveraging the Webex platform to drive
+                                  strategic engagements, accelerate workspace
+                                  transformation and advance customer engagement
+                                  initiatives. In a prior role, Yaman led the
+                                  operations and engagement team at Cisco’s
+                                  Innovation and Experience Center. This
+                                  included developing cutting-edge vertical
+                                  journeys based on end user persona, leveraging
+                                  business architecture & programmability for
+                                  integrating with ecosystem partners and
+                                  driving the value proposition of these
+                                  journeys towards achieving business
+                                  outcomes.</span
+                                >
+                              </p>
+                              <button onclick="btn3p2d()" id="myBtn3p2d">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tab no 5-->
+                        <div class="card tabPanel-b">
+                          <div class="card-1 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.5a.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Ahmad Lubbad</h2>
+                                  <p>Customer Success Specialist - MEA</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>CX Customer Success & Adoption
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Ahmad has close to 12 years of
+                                experience in networking domain with focus on
+                                Cisco products. During this time, he has moved
+                                among several roles in
+                                <span id="dots1p2e">...</span
+                                ><span id="more1p2e"
+                                  >cisco such as Network consulting Engineer,
+                                  Sales Solution architect and at the moment, He
+                                  is a Customer Success Specialist covering
+                                  middle east and Africa theatre. Ahmad has
+                                  expertise in design, implementation, and
+                                  support of Cisco solutions. He is a routing
+                                  and switching CCIE. His current technical
+                                  focus is enterprise networking and Cisco
+                                  DNA.</span
+                                >
+                              </p>
+                              <button onclick="btn1p2e()" id="myBtn1p2e">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-2 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.5b.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Stephanie Liu</h2>
+                                  <p>Global Lead Partner Digital Platform</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p>
+                                <b>Session: </b>Black Belt – Expand Your Edge
+                              </p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b>Stephanie Liu is the Global
+                                Leader of Partner Performance and Experience for
+                                Cisco’s Global Partner Organization. She is
+                                leading a team <span id="dots2p2e">...</span
+                                ><span id="more2p2e"
+                                  >defining the digital strategy and designing
+                                  the capabilities to connect Cisco and Partners
+                                  more effectively, increasing profitability,
+                                  and driving growth. Recently, her team just
+                                  launched Partner Experience Platform (PXP).
+                                  Stephanie was recognized by CRN as 2020 Women
+                                  in the Channel.</span
+                                >
+                              </p>
+                              <button onclick="btn2p2e()" id="myBtn2p2e">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="card-3 card-style">
+                            <div class="profile-pic">
+                              <div class="pic">
+                                <div class="picdiv">
+                                  <img src="../img/2.5c.png" alt="" />
+                                </div>
+                              </div>
+                              <div class="name">
+                                <div class="heading-name">
+                                  <h2>Pınar Yıldız Budakoğlu</h2>
+                                  <p>Software Specialist, MEA</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="session">
+                              <p><b>Session: </b>Session on EA</p>
+                            </div>
+                            <div class="profile">
+                              <p>
+                                <b>Profile: </b> Pınar Yıldız Budakoğlu is
+                                currently part of the Software team responsible
+                                for Enterprise Agreements in Middle East and
+                                Africa. Her area of
+                                <span id="dots3p2e">...</span
+                                ><span id="more3p2e"
+                                  >expertise, before moving to this role, has
+                                  been Collaboration where she was leading
+                                  Collaboration business in Turkey for more than
+                                  8 years. She joined Cisco in 2006 as a Systems
+                                  Engineer and had several roles in the
+                                  technical and channel teams. She has a
+                                  Bachelor’s degree in Computer Science and
+                                  completed her Executive MBA at Koç University.
+                                  Pinar is a happy mother of a 5 years old boy,
+                                  she lives in Dubai and loves dancing and
+                                  Yoga.</span
+                                >
+                              </p>
+                              <button onclick="btn3p2e()" id="myBtn3p2e">
+                                Read more . . .
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animation Div-->
+      <div class="animation-btns">
+        <div class="animation-space">
+          <div class="btn-1-animation">
+            <div class="circle" style="animation-delay: 0s"></div>
+            <div class="circle" style="animation-delay: 0.2s"></div>
+          </div>
+
+          <div class="btn-2-animation">
+            <div class="circle" style="animation-delay: 0s"></div>
+            <div class="circle" style="animation-delay: 0.2s"></div>
+          </div>
+
+          <div class="btn-3-animation">
+            <div class="circle" style="animation-delay: 0s"></div>
+            <div class="circle" style="animation-delay: 0.2s"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer-->
+      <div class="help-btn">
+        <h2>
+          May I Help <br />
+          You ?
+        </h2>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../js/auditorium.js"></script>
+</html>
