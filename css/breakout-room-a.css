@@ -40,9 +40,13 @@
   background-color: #ed7d31;
 }
 
+.partner-program {
+  background-color: #00b050;
+}
+
 .area-top-break h3 {
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .area-top-break h2 {
@@ -170,6 +174,138 @@
 
 .auditoriam_videos.active {
   display: block;
+}
+
+/* Breakout-room bio */
+.choose_days {
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: start !important ;
+}
+.choose_breakouts {
+  margin-bottom: 40px;
+}
+.choose_days h5,
+.choose_breakouts h5 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  text-align: start;
+}
+
+.choose_days ul,
+.choose_breakouts ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.choose_days .active a,
+.choose_breakouts .active a {
+  background-color: #fff;
+}
+
+.choose_days a,
+.choose_breakouts a {
+  background-color: #02b1d0;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: #0d274d;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  display: block;
+  min-width: 100px;
+  text-align: center;
+}
+
+#read-more1,
+#read-more2 {
+}
+
+/*Speakers bio > Bio areas */
+
+.bio_rooms,
+.bio_days {
+  display: none;
+}
+
+.bio_rooms.active,
+.bio_days.active {
+  display: block;
+}
+
+.single_bios_area {
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding: 20px 30px;
+}
+
+.bios_area_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.bions_images {
+  margin-right: 10px;
+}
+
+.bios_details h2 {
+  font-size: 27px;
+  color: #0d274d;
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.bios_details h4 {
+  font-size: 17px;
+  color: #0d274d;
+  margin: 0;
+}
+
+.bios_footers {
+  color: #0d274d;
+}
+strong {
+  color: #0d274d;
+}
+
+.bios_footers h6 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #0d274d;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+.bios_footers p {
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  margin-bottom: 6px;
+  color: #0d274d;
+  overflow: hidden;
+}
+
+.bios_footers.showContent p {
+  height: auto;
+}
+
+.bios_footers a {
+  color: #0d274d;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 1401px) and (max-width: 1450px) {

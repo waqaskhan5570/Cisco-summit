@@ -4,18 +4,18 @@
 }
 
 @font-face {
-  font-family: ciscosans;
+  font-family: "ciscosansttregular";
   src: url("../Fonts/CiscoSansBold.otf") format("openType");
   font-weight: bold;
 }
 @font-face {
-  font-family: ciscosans;
+  font-family: "ciscosansttregular";
   src: url("../Fonts/CiscoSansLight.otf") format("openType");
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: ciscosans;
+  font-family: "ciscosansttregular";
   src: url("../Fonts/CiscoSansTTBold.ttf") format("truetype");
   font-weight: bold;
 }
@@ -783,6 +783,11 @@ div#partner-program1 .agenda-right-footer {
 }
 
 .distribution-readmore a {
+  margin-bottom: 10px;
+}
+
+.distribution-readmore a,
+.read-more-a {
   color: #0d274d;
   text-decoration: underline;
   font-weight: bold;
@@ -880,6 +885,189 @@ button.close_contact {
 
 .lob_distri_bottomside_page_contact a:hover {
   color: #0056b3;
+}
+
+/* Feed back  */
+
+.form-area {
+  padding: 40px 100px;
+}
+
+.feedback {
+  color: #fff;
+}
+
+.top-content {
+  text-align: center;
+}
+
+.feedback h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.feedback .top-content p {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
+/* .singleCitem {
+  display: none;
+} */
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.full-name label {
+  font-size: 1rem;
+  padding: 6px 0px;
+  min-width: 20%;
+}
+
+form#sheet_api input {
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #000;
+  font-family: "ciscosansttregular";
+}
+
+.name-area input {
+  width: 78%;
+  border-radius: 50px;
+  border: 2px solid #111;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Cisco Sans";
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  color: #000;
+}
+
+#first_div {
+  text-align: center;
+}
+
+#pragrap {
+  overflow: hidden;
+}
+
+p.error {
+  display: none;
+  width: 100%;
+  color: red;
+  clear: both;
+  margin: 0;
+}
+
+#pragrap label {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.cisco-patner label {
+  padding-top: 20px;
+}
+
+span.mandotary {
+  color: red;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+textarea {
+  max-width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+
+textarea {
+  overflow: auto;
+  width: 100%;
+  max-height: 100px;
+  padding: 8px;
+}
+
+.respective-words p {
+  color: red;
+  margin: 0;
+  font-size: 14px;
+}
+
+.invalid p.error {
+  display: block;
+}
+
+.left-part {
+  width: 50%;
+  float: left;
+}
+
+.own-words {
+  padding-top: 10px;
+}
+
+.submit-button button#prevBtn {
+  right: auto;
+  left: 0;
+}
+
+.submit-button button {
+  padding: 0;
+  border-radius: 50px;
+  background: transparent;
+  min-width: 70px;
+  color: #fff;
+  right: 35px;
+  border: 0;
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  margin-top: -37px;
+  cursor: pointer;
+}
+
+/* Feedback > at the end of feedback */
+.feedback_output {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.feedback_output h1 {
+  text-align: center;
+  color: #02b1d0;
+  font-size: 40px;
+  font-weight: 500;
+}
+.feedback_output img {
+  max-height: 200px;
+  width: auto;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1365px) {

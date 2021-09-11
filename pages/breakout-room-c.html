@@ -62,7 +62,7 @@
                 <a href="networking-lounge.html">Networking <br />Lounge</a>
               </li>
               <li>
-                <a href="#">Feedback</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback" >Feedback</a>
               </li>
               <li>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
@@ -86,7 +86,7 @@
         </div>
         <div class="area-bottom-break">
             <div class="security button-p1">
-                <a href="#" >Feedback</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
             </div>
             <div class="security button-p2">
                 <a href="breakout-session.html"><img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/single-arrow.png"> Breakout Rooms </a>
@@ -131,15 +131,305 @@
     </div>
 
     <!-- All pop ups -->
+    
+    <!-- Feedback -->
+    <div class="modal fade " id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
+            <div class="modal-content ">
+                <div div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body feedback ">
+                    <div class="form-area">
+                        <div class="top-content">
+                            <h2>Cisco Gulf Partner Summit 2021 Partner Survey</h2>
+                            <p>Please complete all fields, your feedback is valuable and<br>
+                            helps Cisco shape your experience working with us.</p>
+                        </div>
+                        <!-- At the end of feed back -->
+                        <div class="feedback_output" id="feedback-out" style="display:none;">
+                            <h1>Thank you for your Feedback</h1>
+                            <p style=" text-align: center; color: #02b1d0; font-size: 25px; font-weight: 500;  ">Congratulations you have entered the raffle draw</p>
+                            <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/raffle_draw.png" alt=""> 
+                        </div>
+
+                        <form action="#" id="sheet_api" method="post">
+                            <div class="name-area singleCitem fb-1 " id="first_div"  style="display: block;">
+                                <div class="raffel-draw">
+                                    <div class="draw-image">
+                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/raffle_draw.png" alt="">
+                                        <p>To enter the raffle draw, please continue to the next page to fill in the survey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name-area singleCitem fb-2"  style="display: none;">
+                                    <div class="full-name">
+                                        <label>Full Name:</label>
+                                    <input type="text" name="name" placeholder="Full Name *" value="" class="require">
+                                    </div>
+
+                                <div class="full-name">
+                                    <label>Company:</label>
+                                    <input type="text" name="company" placeholder="Company *" value="" class="require">
+                                </div>
+                                <div class="full-name">
+                                    <label>Job Role:</label>
+                                    <input type="text" name="job" placeholder="Job Role *" value="" class="require">
+                                </div>
+                                <div class="full-name">
+                                    <label>Email:</label>
+                                    <input type="email" name="email" id="email_idsd" placeholder="Email *" value="" class="require">
+                                    <div id="email-validation" style="display:none;">Please provide a valid email.</div>
+                                </div>
+                                <div class="full-name">
+                                    <label>Country:</label>
+                                    <input type="text" name="country" placeholder="Country *" value="" class="require">
+                                </div>
+
+                            </div>
+                            <div class="cisco-patnar-area singleCitem fb-3"  id="pragrap" style="display: none;">
+                                <div class="cisco-patner" id="pragrap">
+                                    <p class="error">Please select an option</p>
+                                    <label>From the keynote topics today, which one did you feel is most relevant<br> for your organization? <span class="mandotary">*</span></label><br>
+                                    <div class="lefts">
+                                        <input type="radio" class="radio" name="cpartner" value="Future Ready"> Future Ready <br>
+                                        <input type="radio" class="radiom" name="cpartner" value="An Inclusive Future for All"> An Inclusive Future for All<br>
+                                        <input type="radio" class="radiom" name="cpartner" value="EMEAR Top of mind and Key Priorities"> EMEAR Top of mind and Key Priorities<br>
+                                        <input type="radio" class="radiom" name="cpartner" value="Customer Experience in a Digital First World"> Customer Experience in a Digital First World
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-business-area singleCitem fb-4" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>From the breakout sessions, which track did you find is more revalant for your organization?<span class="mandotary">*</span></label><br>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="radio" name="bopportunity" value="Security"> Security<br>
+                                    </div>
+                                    
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Data Center &amp; Cloud"> Data Center &amp; Cloud<br>
+                                    </div>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Collaboration"> Collaboration<br>
+                                    </div>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Partner Programs"> Partner Programs<br>
+                                    </div>
+                            </div>
+                            <div class="geography-area singleCitem fb-5" id="pragrap" style="display: none;">
+                                    <p class="error">Please write something here.</p>
+                                <label>Is there any topic you would like to have seen or heard from, aside from the ones covered today?<span class="mandotary">*</span></label><br>
+                                <textarea name="topic-artical" class="radio" rows="4" cols="50"></textarea>
+                            </div>
+                            <div class="selling-to-small-businesses singleCitem fb-6" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>What would you like to see Cisco do more to help you win in your respective markets? <span class="mandotary">*</span></label><br>
+                                    <input type="radio" class="radio" name="smallbusines" value="Sales Enablement"> Sales Enablement<br>
+                                    <input type="radio" class="Somewhat" name="smallbusines" value="Technical Enablement"> Technical Enablement<br>
+                                    <input type="radio" class="agree" name="smallbusines" value="Marketing Support"> Marketing Support<br>
+                                    <div class="respective-words">
+                                        <p style="display:none">Please Write about it.</p>
+                                        Let us know in your own words<br>
+                                        <textarea id="w3review" name="respective-words" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <div class="like-to-see-cisco singleCitem fb-7" id="pragrap" style="display: none;">
+                                    <p class="error">Please write something.</p>
+                                <label>In your own words, describe some of the key market challenges you’re experiencing today? <span class="mandotary">*</span></label><br>
+                                    
+                                <div class="experiencing-words">
+                                    <textarea id="w3review" name="experiencing-words" rows="4" cols="85"></textarea>
+                                </div>
+                            </div>
+                            <div class="Cisco-do-more singleCitem fb-8" id="pragrap" style="display: none;">
+                                    <p class="error">Please select options</p>
+                                <label>Which of the following sectors are you mainly working with? (Pick the top 3) <span class="mandotary">*</span></label><br>
+                                    <div class="cisco-do-more-part" id="pragrap">
+                                        <div class="left-part">
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Tourism / Hospitality"> Tourism / Hospitality<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Manufacturing"> Manufacturing<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Education"> Education<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Construction"> Construction<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Energy"> Energy<br>
+                                        </div>
+                                        <div class="right-part">
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Health"> Health<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Retail"> Retail<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Transportation and Logistics"> Transportation and Logistics<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Finance"> Finance<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Public Sector"> Public Sector<br>
+                                        </div>
+                                    </div>
+                                    <div class="own-words" id="spefify_res">
+                                        <p style="display:none">Please write something.</p>
+                                        <textarea id="w3review" name="youwinown-words" rows="4" cols="85" placeholder="Other, Specify"></textarea>
+                                    </div>
+                            </div>
+                            <div class="like-to-see-cisco singleCitem fb-9" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>Do you have a preferred Cisco Distributor? <span class="mandotary">*</span></label><br>
+                                    <input type="radio" class="radio" name="wininsmall" value="Yes, I am loyal to one Cisco Distributor"> Yes, I am loyal to one Cisco Distributor<br>
+                                    <input type="radio" class="Somewhat" name="wininsmall" value="No, I work with multiple Cisco Distributors"> No, I work with multiple Cisco Distributors<br>
+                                    <input type="radio" class="Somewhat" name="wininsmall" value="N/A"> N/A<br>
+                                    <div class="own-words">
+                                        Comment<br>
+                                        <textarea id="w3review_new" name="own-words4" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <div class="challenges singleCitem fb-10" id="last_div" style="display: none;">
+                                <label>Would you like to make any additional comments or suggestions?</label><br>
+                                    <div class="own-words">
+                                        <textarea id="w3review" name="adcoown-words" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <!-- One row end -->
+                            <div class="submit-button">
+                                <button type="button" id="prevBtn" onclick="nextPrev(this.id)" style="display: none;">❮</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(this.id)">❯</button>
+                            </div> 
+                        </form>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- Speakers Bio -->
-     <div class="modal text-center" id="speakers-bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal text-center" id="speakers-bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
             <div class="modal-content ">
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body ">
+                <div class="modal-body">
+                    <div class="choose_days">
+                        <h5>Choose Day:</h5>
+                        <ul>
+                            <li class="active" id="choose_day_1" onclick="changeBioDay(this.id)"><a href="#"  >Day 1 (April 6th)</a></li>
+                            <li class=""  id="choose_day_2" onclick="changeBioDay(this.id)"><a href="#" >Day 2 (April 7th)</a></li>  
+                        </ul>
+                    </div>
+                     <div class="bio_areas">
+                         <div class="bio_days active" id="bio_day_1">
+                             <div class="bio_rooms bio_collaboration active ">
+                                    <div class="total_tions_area">
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 16.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>George Gharios</h2>
+                                                    <h4>Sales Specialist</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Delivering the Future of Customer Experience</h6>
+                                                <p><strong>Profile:</strong> George Joined Cisco Advanced Servers in 2007 as Contact Center Consulting Engineer. During his work in Cisco services&nbsp;George&nbsp;Led&nbsp;multiple account transformations by understanding, identifying gaps, working with customers, account teams and services organization to propose and implement comprehensive solutions.
+                                                George&nbsp;played a key role in creating multiple Services opportunities as well as leading complex delivery engagements by working internally and with different Cisco partners to meet the challenging customer requirements.
+                                                Then in December 2020, George Joined the Contact Center Sales Specialist team covering Middle East and Africa.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 17.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Fabien Habbouche</h2>
+                                                    <h4>Collaboration Sales Specialist</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Return to Office – Supporting your new Hybrid workforce </h6>
+                                                <p><strong>Profile:</strong> Fabien, a skilled network consultant with an outstanding background in network design and implementation, has close to 14 years of experience in the networking domain with a focus on Cisco’s Collaboration technologies.
+                                                
+                                                Fabien started his career with Cisco in 2015 as a Smart Cities Consultant. Shortly after that, he moved to become an Enterprise Account SE covering retail, transport and logistics and oil and gas customers. Fabien is currently a Collaboration Sales Specialist covering UAE, Oman and Pakistan.
+                                                
+                                                Fabien has a bachelor’s degree in Computer and Communications Engineering. His passion and area of interest has always been around Cisco’s Collaboration technologies. Fabien has also achieved his CCIE in Collaboration back in 2010.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 18.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Yaman Hakmi</h2>
+                                                    <h4>System Engineering Leader for<br> Collaboration Technology</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Secure Remote Work</h6>
+                                                <p><strong>Profile:</strong> Yaman is the system engineering leader for collaboration technology in Middle East &amp; Africa.   Yaman has over 16 years of industry experience in the ICT field.   In his current role, Yaman leads a team of technical solution architects, and works extensively with customers and partners on leveraging the Webex platform to drive strategic engagements, accelerate workspace transformation and advance customer engagement initiatives.  
+                                                In a prior role, Yaman led the operations and engagement team at Cisco’s Innovation and Experience Center.  This included developing cutting-edge vertical journeys based on end user persona, leveraging business architecture &amp; programmability for integrating with ecosystem partners and driving the value proposition of these journeys towards achieving business outcomes.
+                                                .</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                         </div>
+                         <div class="bio_days " id="bio_day_2">
+                                <div class="bio_rooms bio_collaboration active ">
+                                    <div class="total_tions_area">
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 31.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Fayroz Mehdi</h2>
+                                                    <h4>Sales Specialist - Collaboration<br> Architecture</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong></h6><h4>Collaboration Flex Plan – The Best way to buy meetings, team collaboration, calling, and contact center</h4>
+                                                <p><strong>Profile:</strong> Fayroz Mehdi joined Cisco via the WebEx&nbsp;acquisition back in 2007 which gave him early exposure to Cloud&nbsp;collaboration as technology area and&nbsp;SaaS as a business model.
+                                                As a virtual sales specialist he has sold WebEx widely into APAC and EMEA regions. In 2013 he moved to Qatar to align with MiddleEast territory where&nbsp;he successfully partnered with service providers to sell WebEx in&nbsp;order to overcome challenging VOIP restrictions.
+                                                In his most recent role he has been driving both on-prem and cloud collaboration business in Qatar with additional focus on enabling partners across Gulf. Fayroz holds a Bachelor of Commerce degree from Bangalore University and in his free time loves to&nbsp;hone his skills in his new found love for cooking.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 32.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Gawie Herholdt</h2>
+                                                    <h4>Technical Solutions Architect</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Web Cloud Connect UC</h6>
+                                                <p><strong>Profile:</strong> Gawie Herholdt is a Technical Solutions Architect for Cisco Collaboration solutions. He joined Cisco in 2007 and held various engineering positions in Cisco. He holds a Diploma in Information Technology from the University of South Africa and is an active Cisco CCIE with extensive knowledge and experience in Cisco Collaboration products and solutions. Outside of Cisco he enjoys recreational sailing, motorcycling and traveling.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/yamanhakmi.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Yaman Hakim</h2>
+                                                    <h4>System Engineering leader for Collaboration Technology</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Secure Remote Work</h6>
+                                                <p>Profile: Yaman is the system engineering leader for collaboration technology in Middle East &amp; Africa.   Yaman has over 16 years of industry experience in the ICT field.   In his current role, Yaman leads a team of technical solution architects, and works extensively with customers and partners on leveraging the Webex platform to drive strategic engagements, accelerate workspace transformation and advance customer engagement initiatives.  In a prior role, Yaman led the operations and engagement team at Cisco’s Innovation and Experience Center.  This included developing cutting-edge vertical journeys based on end user persona, leveraging business architecture &amp; programmability for integrating with ecosystem partners and driving the value proposition of these journeys towards achieving business outcomes.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                         </div>
+                     </div>
                     
                     
                 </div>
@@ -2201,7 +2491,7 @@
 
   <script src="../js/lobby.js" >
   </script>
-  <script src="../js/breakout-room-a.js" >
+  <script src="../js/breakout-room.js" >
   </script>
   
 

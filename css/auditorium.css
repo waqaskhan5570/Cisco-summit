@@ -60,6 +60,16 @@
   top: 35%;
 }
 
+/* Visit Distributor */
+.audi-distribution-content p {
+  height: 150px;
+  overflow: hidden;
+}
+
+.audi-distribution-content.showContent p {
+  height: auto;
+}
+
 /* Speaker bio css */
 
 .choose_days {

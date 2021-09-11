@@ -62,7 +62,7 @@
                 <a href="networking-lounge.html">Networking <br />Lounge</a>
               </li>
               <li>
-                <a href="#">Feedback</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
               </li>
               <li>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
@@ -86,7 +86,7 @@
         </div>
         <div class="area-bottom-break">
             <div class="security button-p1">
-                <a href="#" >Feedback</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
             </div>
             <div class="security button-p2">
                 <a href="breakout-session.html"><img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/single-arrow.png"> Breakout Rooms </a>
@@ -132,6 +132,169 @@
 
     <!-- All pop ups -->
 
+    <!-- Feedback -->
+    <div class="modal fade " id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
+            <div class="modal-content ">
+                <div div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body feedback ">
+                    <div class="form-area">
+                        <div class="top-content">
+                            <h2>Cisco Gulf Partner Summit 2021 Partner Survey</h2>
+                            <p>Please complete all fields, your feedback is valuable and<br>
+                            helps Cisco shape your experience working with us.</p>
+                        </div>
+                        <!-- At the end of feed back -->
+                        <div class="feedback_output" id="feedback-out" style="display:none;">
+                            <h1>Thank you for your Feedback</h1>
+                            <p style=" text-align: center; color: #02b1d0; font-size: 25px; font-weight: 500;  ">Congratulations you have entered the raffle draw</p>
+                            <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/raffle_draw.png" alt=""> 
+                        </div>
+
+                        <form action="#" id="sheet_api" method="post">
+                            <div class="name-area singleCitem fb-1 " id="first_div"  style="display: block;">
+                                <div class="raffel-draw">
+                                    <div class="draw-image">
+                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/raffle_draw.png" alt="">
+                                        <p>To enter the raffle draw, please continue to the next page to fill in the survey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name-area singleCitem fb-2"  style="display: none;">
+                                    <div class="full-name">
+                                        <label>Full Name:</label>
+                                    <input type="text" name="name" placeholder="Full Name *" value="" class="require">
+                                    </div>
+
+                                <div class="full-name">
+                                    <label>Company:</label>
+                                    <input type="text" name="company" placeholder="Company *" value="" class="require">
+                                </div>
+                                <div class="full-name">
+                                    <label>Job Role:</label>
+                                    <input type="text" name="job" placeholder="Job Role *" value="" class="require">
+                                </div>
+                                <div class="full-name">
+                                    <label>Email:</label>
+                                    <input type="email" name="email" id="email_idsd" placeholder="Email *" value="" class="require">
+                                    <div id="email-validation" style="display:none;">Please provide a valid email.</div>
+                                </div>
+                                <div class="full-name">
+                                    <label>Country:</label>
+                                    <input type="text" name="country" placeholder="Country *" value="" class="require">
+                                </div>
+
+                            </div>
+                            <div class="cisco-patnar-area singleCitem fb-3"  id="pragrap" style="display: none;">
+                                <div class="cisco-patner" id="pragrap">
+                                    <p class="error">Please select an option</p>
+                                    <label>From the keynote topics today, which one did you feel is most relevant<br> for your organization? <span class="mandotary">*</span></label><br>
+                                    <div class="lefts">
+                                        <input type="radio" class="radio" name="cpartner" value="Future Ready"> Future Ready <br>
+                                        <input type="radio" class="radiom" name="cpartner" value="An Inclusive Future for All"> An Inclusive Future for All<br>
+                                        <input type="radio" class="radiom" name="cpartner" value="EMEAR Top of mind and Key Priorities"> EMEAR Top of mind and Key Priorities<br>
+                                        <input type="radio" class="radiom" name="cpartner" value="Customer Experience in a Digital First World"> Customer Experience in a Digital First World
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-business-area singleCitem fb-4" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>From the breakout sessions, which track did you find is more revalant for your organization?<span class="mandotary">*</span></label><br>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="radio" name="bopportunity" value="Security"> Security<br>
+                                    </div>
+                                    
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Data Center &amp; Cloud"> Data Center &amp; Cloud<br>
+                                    </div>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Collaboration"> Collaboration<br>
+                                    </div>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Partner Programs"> Partner Programs<br>
+                                    </div>
+                            </div>
+                            <div class="geography-area singleCitem fb-5" id="pragrap" style="display: none;">
+                                    <p class="error">Please write something here.</p>
+                                <label>Is there any topic you would like to have seen or heard from, aside from the ones covered today?<span class="mandotary">*</span></label><br>
+                                <textarea name="topic-artical" class="radio" rows="4" cols="50"></textarea>
+                            </div>
+                            <div class="selling-to-small-businesses singleCitem fb-6" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>What would you like to see Cisco do more to help you win in your respective markets? <span class="mandotary">*</span></label><br>
+                                    <input type="radio" class="radio" name="smallbusines" value="Sales Enablement"> Sales Enablement<br>
+                                    <input type="radio" class="Somewhat" name="smallbusines" value="Technical Enablement"> Technical Enablement<br>
+                                    <input type="radio" class="agree" name="smallbusines" value="Marketing Support"> Marketing Support<br>
+                                    <div class="respective-words">
+                                        <p style="display:none">Please Write about it.</p>
+                                        Let us know in your own words<br>
+                                        <textarea id="w3review" name="respective-words" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <div class="like-to-see-cisco singleCitem fb-7" id="pragrap" style="display: none;">
+                                    <p class="error">Please write something.</p>
+                                <label>In your own words, describe some of the key market challenges you’re experiencing today? <span class="mandotary">*</span></label><br>
+                                    
+                                <div class="experiencing-words">
+                                    <textarea id="w3review" name="experiencing-words" rows="4" cols="85"></textarea>
+                                </div>
+                            </div>
+                            <div class="Cisco-do-more singleCitem fb-8" id="pragrap" style="display: none;">
+                                    <p class="error">Please select options</p>
+                                <label>Which of the following sectors are you mainly working with? (Pick the top 3) <span class="mandotary">*</span></label><br>
+                                    <div class="cisco-do-more-part" id="pragrap">
+                                        <div class="left-part">
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Tourism / Hospitality"> Tourism / Hospitality<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Manufacturing"> Manufacturing<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Education"> Education<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Construction"> Construction<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Energy"> Energy<br>
+                                        </div>
+                                        <div class="right-part">
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Health"> Health<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Retail"> Retail<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Transportation and Logistics"> Transportation and Logistics<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Finance"> Finance<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Public Sector"> Public Sector<br>
+                                        </div>
+                                    </div>
+                                    <div class="own-words" id="spefify_res">
+                                        <p style="display:none">Please write something.</p>
+                                        <textarea id="w3review" name="youwinown-words" rows="4" cols="85" placeholder="Other, Specify"></textarea>
+                                    </div>
+                            </div>
+                            <div class="like-to-see-cisco singleCitem fb-9" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>Do you have a preferred Cisco Distributor? <span class="mandotary">*</span></label><br>
+                                    <input type="radio" class="radio" name="wininsmall" value="Yes, I am loyal to one Cisco Distributor"> Yes, I am loyal to one Cisco Distributor<br>
+                                    <input type="radio" class="Somewhat" name="wininsmall" value="No, I work with multiple Cisco Distributors"> No, I work with multiple Cisco Distributors<br>
+                                    <input type="radio" class="Somewhat" name="wininsmall" value="N/A"> N/A<br>
+                                    <div class="own-words">
+                                        Comment<br>
+                                        <textarea id="w3review_new" name="own-words4" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <div class="challenges singleCitem fb-10" id="last_div" style="display: none;">
+                                <label>Would you like to make any additional comments or suggestions?</label><br>
+                                    <div class="own-words">
+                                        <textarea id="w3review" name="adcoown-words" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <!-- One row end -->
+                            <div class="submit-button">
+                                <button type="button" id="prevBtn" onclick="nextPrev(this.id)" style="display: none;">❮</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(this.id)">❯</button>
+                            </div> 
+                        </form>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <!-- Speakers Bio -->
      <div class="modal text-center" id="speakers-bio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
@@ -139,7 +302,147 @@
                 <div class="modal-header">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body ">
+                <div class="modal-body">
+                    <div class="choose_days">
+                        <h5>Choose Day:</h5>
+                        <ul>
+                            <li class="active" id="choose_day_1" onclick="changeBioDay(this.id)"><a href="#"  >Day 1 (April 6th)</a></li>
+                            <li class=""  id="choose_day_2" onclick="changeBioDay(this.id)"><a href="#" >Day 2 (April 7th)</a></li>  
+                        </ul>
+                    </div>
+                     <div class="bio_areas">
+                         <div class="bio_days active" id="bio_day_1">
+                             <div class="bio_rooms bio_security active">
+                                    <div class="total_tions_area">
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 7.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Rami Abbas</h2>
+                                                    <h4>Regional Technology Incubation Specialist/Lead </h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> SASE + SD-WAN</h6>
+                                                <p><strong>Profile:</strong> Rami Abbas is an IT industry veteran with close to 10 years of experience in the Cyber Security space. Rami currently leads Cisco cloud Security across the Middle East. Before joining Cisco, Rami held positions at different Cyber Security Industry leaders. He brings with him a strong experience in the space of Manager Cyber Security as he worked for multiple years at leading Service Providers in the region.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 8.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Ahmad Chehime </h2>
+                                                    <h4>Regional Technology Incubation<br>Specialist/Lead </h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Cisco Microsegmentation and Workload Protection </h6>
+                                                <p><strong>Profile:</strong> Ahmad Chehime is a Regional Technology Incubation Specialist/Lead – currently leading Cisco's Secure Workload (Formerly Tetration) and Network Analytics (Stealthwatch) Products Portfolio and customer adoption across Middle East and Africa 
+                                                Ahmad is a 21 year Cisco veteran, joined Cisco USA in San Jose, California in early 2000 as a Technical Marketing Engineer focusing on Service Providers Leased-Lines and Broadband Aggregation Architectures. Worked closely with major Service Providers Worldwide and has extensive experience in Service Provider infrastructure deployments.
+
+                                                In early 2006, Ahmad took on a Product Management role to drive Cisco's next generation Mid-range router portfolio ASR 1000 and Cisco 7x00 business at a global level. In that role, Ahmad led the new Cisco ASR-1000 product family’ full product development lifecycle.
+
+                                                In 2009, Ahmad moved to Saudi Arabia and joined Cisco KSA and led a team of Systems and Network Consultant Engineers to design network infrastructure blueprints for Mega-Cities projects. A year later Ahmad worked closely with the incumbent service provider in KSA; STC on various major projects, MPLS Backbone, Broadband Aggregation, IPTV, and International PoPs whole-sale transport services.
+
+                                                In early 2014, Ahmad moved to Dubai, UAE and has been representing Cisco World-Wide New Technologies Incubation Team. Working closely with our customers to make their Digital Transformation journey a reality by evangelizing the Cisco’s Next-Generation DC SDN Architecture, Secure Workload and Analytics strategy. 
+                                                </p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 9.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Mahmoud Rabi </h2>
+                                                    <h4>Cyber Security Specialist</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> SecureX </h6>
+                                                <p><strong>Profile:</strong> Mahmoud is a cyber security specialist working for Cisco Systems. He has over 15 years experience in the Cybersecurity domain with focus on advanced threats prevention and next generation security solutions. Mahmoud has worked for several cyber security focused vendors across Middle East and Africa. Currently, Mahmoud is leading Cisco security business for UAE Enterprise and Public Sector.
+                                                </p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                         </div>
+                         <div class="bio_days " id="bio_day_2">
+                                <div class="bio_rooms bio_security active">
+                                    <div class="total_tions_area">
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 26.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Hadil Ghaban</h2>
+                                                    <h4>Cyber Security Technical Solutions Specialist</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> SASE + SD-WAN</h6>
+                                                <p><strong>Profile:</strong> Hadil Ghaban is a Cyber Security Technical Solutions Specialist for the Middle East working with Global Security Specialist Organization GSSO at Cisco. She is responsible for empowering Cisco partners to provide their customers with the right solutions to assure business continuity and to meet their business needs. Hadil enables partners with knowledge about Cyber Security to increase and maximize their profitability through Cisco products and Services.
+                                                Hadil graduated from New York University with a Master's degree in Telecommunication Engineering and has a Bachelor's in Computer Science. Also, she held many Cisco Professional Certifications.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                        <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 25.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Mazen Al Jundi</h2>
+                                                    <h4>Technical Lead for Cisco Secure workload</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> Secure Workload </h6>
+                                                <p><strong>Profile:</strong> Mazen Al Jundi, CCIE 29956
+                                                Cisco Systems - Dubai, United Arab Emirates.
+
+                                                Mazen Al Jundi is a Technical Lead for Cisco Secure workload (Formerly Tetration) part of Worldwide Secure Workload and Analytics Engineering covering Middle East and Africa.
+
+                                                With over 15 years of experience, in the ICT field, Mazen’s profound knowledge and experience has been of immense benefit to his customers digital transformation journey.
+
+                                                His love for knowledge sharing has helped others to discover their potentials, as he coaches them in ways to grow bigger and better in the world of IT.</p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                         <div class="single_bios_area">
+                                            <div class="bios_area_header">
+                                                <div class="bions_images">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 27.png" alt="">
+                                                </div>
+                                                <div class="bios_details">
+                                                    <h2>Omar Ma’ayah</h2>
+                                                    <h4>Technical Solutions Architect</h4>
+                                                </div>
+                                            </div>
+                                            <div class="bios_footers">
+                                                <h6><strong>Session:</strong> SecureX </h6>
+                                                <p><strong>Profile:</strong> Omar Maayah is a Technical Solutions Architect focusing on Cisco’s Security technologies, in UAE.
+                                                    Omar comes with 12+ years’ experience, joined Cisco UAE back in 2015 as a Product Specialist focusing on Secure Network Analytics covering Cisco Security Analytics in Middle East and Africa.
+                                                    In early 2018, Omar took on a Technical Solutions Architect role to drive Cisco's Security Sales activities in UAE supporting UAE’s public sector and Enterprise customers.
+                                                    Before Joining Cisco Omar worked as a Senior Network Admin in Abu Dhabi where he was able to achieve his CCIE R&amp;S certificate, then became a Senior Network Operations Engineer in Etisalat dedicated to manage and operate Etisalat’s International MPLS network and Internet PoPs, then worked as a Pre-Sales Engineer in Dimension Data.
+
+                                                </p>
+                                                <a href="#" class="bio_read_more">Read More...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                     </div>
                     
                     
                 </div>
@@ -2201,7 +2504,7 @@
 
   <script src="../js/lobby.js" >
   </script>
-  <script src="../js/breakout-room-a.js" >
+   <script src="../js/breakout-room.js" >
   </script>
   
 

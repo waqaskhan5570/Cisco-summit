@@ -49,7 +49,6 @@
             <ul>
               <li >
                 <a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a>
-                
               </li>
               <li>
                 <a href="lobby.html">Lobby</a>
@@ -62,7 +61,7 @@
                 <a href="networking-lounge.html">Networking <br />Lounge</a>
               </li>
               <li>
-                <a href="#">Feedback</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
               </li>
               <li>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
@@ -835,6 +834,170 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <!-- Feedback -->
+    <div class="modal fade " id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
+            <div class="modal-content ">
+                <div div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body feedback ">
+                    <div class="form-area">
+                        <div class="top-content">
+                            <h2>Cisco Gulf Partner Summit 2021 Partner Survey</h2>
+                            <p>Please complete all fields, your feedback is valuable and<br>
+                            helps Cisco shape your experience working with us.</p>
+                        </div>
+                        <!-- At the end of feed back -->
+                        <div class="feedback_output" id="feedback-out" style="display:none;">
+                            <h1>Thank you for your Feedback</h1>
+                            <p style=" text-align: center; color: #02b1d0; font-size: 25px; font-weight: 500;  ">Congratulations you have entered the raffle draw</p>
+                            <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/raffle_draw.png" alt=""> 
+                        </div>
+
+                        <form action="#" id="sheet_api" method="post">
+                            <div class="name-area singleCitem fb-1 " id="first_div"  style="display: block;">
+                                <div class="raffel-draw">
+                                    <div class="draw-image">
+                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/raffle_draw.png" alt="">
+                                        <p>To enter the raffle draw, please continue to the next page to fill in the survey</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="name-area singleCitem fb-2"  style="display: none;">
+                                    <div class="full-name">
+                                        <label>Full Name:</label>
+                                    <input type="text" name="name" placeholder="Full Name *" value="" class="require">
+                                    </div>
+
+                                <div class="full-name">
+                                    <label>Company:</label>
+                                    <input type="text" name="company" placeholder="Company *" value="" class="require">
+                                </div>
+                                <div class="full-name">
+                                    <label>Job Role:</label>
+                                    <input type="text" name="job" placeholder="Job Role *" value="" class="require">
+                                </div>
+                                <div class="full-name">
+                                    <label>Email:</label>
+                                    <input type="email" name="email" id="email_idsd" placeholder="Email *" value="" class="require">
+                                    <div id="email-validation" style="display:none;">Please provide a valid email.</div>
+                                </div>
+                                <div class="full-name">
+                                    <label>Country:</label>
+                                    <input type="text" name="country" placeholder="Country *" value="" class="require">
+                                </div>
+
+                            </div>
+                            <div class="cisco-patnar-area singleCitem fb-3"  id="pragrap" style="display: none;">
+                                <div class="cisco-patner" id="pragrap">
+                                    <p class="error">Please select an option</p>
+                                    <label>From the keynote topics today, which one did you feel is most relevant<br> for your organization? <span class="mandotary">*</span></label><br>
+                                    <div class="lefts">
+                                        <input type="radio" class="radio" name="cpartner" value="Future Ready"> Future Ready <br>
+                                        <input type="radio" class="radiom" name="cpartner" value="An Inclusive Future for All"> An Inclusive Future for All<br>
+                                        <input type="radio" class="radiom" name="cpartner" value="EMEAR Top of mind and Key Priorities"> EMEAR Top of mind and Key Priorities<br>
+                                        <input type="radio" class="radiom" name="cpartner" value="Customer Experience in a Digital First World"> Customer Experience in a Digital First World
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-business-area singleCitem fb-4" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>From the breakout sessions, which track did you find is more revalant for your organization?<span class="mandotary">*</span></label><br>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="radio" name="bopportunity" value="Security"> Security<br>
+                                    </div>
+                                    
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Data Center &amp; Cloud"> Data Center &amp; Cloud<br>
+                                    </div>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Collaboration"> Collaboration<br>
+                                    </div>
+                                    <div class="geography-area-right">
+                                        <input type="radio" class="agree" name="bopportunity" value="Partner Programs"> Partner Programs<br>
+                                    </div>
+                            </div>
+                            <div class="geography-area singleCitem fb-5" id="pragrap" style="display: none;">
+                                    <p class="error">Please write something here.</p>
+                                <label>Is there any topic you would like to have seen or heard from, aside from the ones covered today?<span class="mandotary">*</span></label><br>
+                                <textarea name="topic-artical" class="radio" rows="4" cols="50"></textarea>
+                            </div>
+                            <div class="selling-to-small-businesses singleCitem fb-6" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>What would you like to see Cisco do more to help you win in your respective markets? <span class="mandotary">*</span></label><br>
+                                    <input type="radio" class="radio" name="smallbusines" value="Sales Enablement"> Sales Enablement<br>
+                                    <input type="radio" class="Somewhat" name="smallbusines" value="Technical Enablement"> Technical Enablement<br>
+                                    <input type="radio" class="agree" name="smallbusines" value="Marketing Support"> Marketing Support<br>
+                                    <div class="respective-words">
+                                        <p style="display:none">Please Write about it.</p>
+                                        Let us know in your own words<br>
+                                        <textarea id="w3review" name="respective-words" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <div class="like-to-see-cisco singleCitem fb-7" id="pragrap" style="display: none;">
+                                    <p class="error">Please write something.</p>
+                                <label>In your own words, describe some of the key market challenges you’re experiencing today? <span class="mandotary">*</span></label><br>
+                                    
+                                <div class="experiencing-words">
+                                    <textarea id="w3review" name="experiencing-words" rows="4" cols="85"></textarea>
+                                </div>
+                            </div>
+                            <div class="Cisco-do-more singleCitem fb-8" id="pragrap" style="display: none;">
+                                    <p class="error">Please select options</p>
+                                <label>Which of the following sectors are you mainly working with? (Pick the top 3) <span class="mandotary">*</span></label><br>
+                                    <div class="cisco-do-more-part" id="pragrap">
+                                        <div class="left-part">
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Tourism / Hospitality"> Tourism / Hospitality<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Manufacturing"> Manufacturing<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Education"> Education<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Construction"> Construction<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Energy"> Energy<br>
+                                        </div>
+                                        <div class="right-part">
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Health"> Health<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Retail"> Retail<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Transportation and Logistics"> Transportation and Logistics<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Finance"> Finance<br>
+                                            <input type="checkbox" class="Tourism game" name="youwin[]" value="Public Sector"> Public Sector<br>
+                                        </div>
+                                    </div>
+                                    <div class="own-words" id="spefify_res">
+                                        <p style="display:none">Please write something.</p>
+                                        <textarea id="w3review" name="youwinown-words" rows="4" cols="85" placeholder="Other, Specify"></textarea>
+                                    </div>
+                            </div>
+                            <div class="like-to-see-cisco singleCitem fb-9" id="pragrap" style="display: none;">
+                                    <p class="error">Please select an option</p>
+                                <label>Do you have a preferred Cisco Distributor? <span class="mandotary">*</span></label><br>
+                                    <input type="radio" class="radio" name="wininsmall" value="Yes, I am loyal to one Cisco Distributor"> Yes, I am loyal to one Cisco Distributor<br>
+                                    <input type="radio" class="Somewhat" name="wininsmall" value="No, I work with multiple Cisco Distributors"> No, I work with multiple Cisco Distributors<br>
+                                    <input type="radio" class="Somewhat" name="wininsmall" value="N/A"> N/A<br>
+                                    <div class="own-words">
+                                        Comment<br>
+                                        <textarea id="w3review_new" name="own-words4" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <div class="challenges singleCitem fb-10" id="last_div" style="display: none;">
+                                <label>Would you like to make any additional comments or suggestions?</label><br>
+                                    <div class="own-words">
+                                        <textarea id="w3review" name="adcoown-words" rows="4" cols="85"></textarea>
+                                    </div>
+                            </div>
+                            <!-- One row end -->
+                            <div class="submit-button">
+                                <button type="button" id="prevBtn" onclick="nextPrev(this.id)" style="display: none;">❮</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(this.id)">❯</button>
+                            </div> 
+                        </form>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Agenda Toggle -->
@@ -2711,14 +2874,17 @@
                                     <h4 id="back-to-area-1">Ingram Micro</h4>
                                     <img src="http://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/ingram.png" alt="">
                                 </div>
-                                <div class="distribution-content" id="area_text_details_1">
+                                <div class="distribution-content audi-distribution-content" id="area_text_details_1">
                                     <p>Ingram Micro helps businesses fully realize the promise of technology™—helping them maximize the value of the technology that they make, sell or use. With its vast global infrastructure and focus on cloud, mobility, supply chain and technology solutions, Ingram Micro enables business partners to operate more efficiently and successfully in the markets they serve.<br>
-                                    No other company delivers as broad and deep a spectrum of technology and supply chain services to businesses around the<span id="moreText"> world. Founded in 1979, Ingram Micro’s role as a leader and innovator in technology and Commerce and Fulfillment has fueled its rise to the 64th ranked corporation in the FORTUNE 500®.
-                                    Ingram Micro in the META region (Middle East, Turkey and Africa) is the authorized distributor for most of the leading IT hardware, software and communications manufacturers in the world. Ingram Micro distributes a wide range of Value Added solutions and products covering Data Centre solutions, Software &amp; Virtualization, Servers, Storage, Cyber Security, Networking, Infrastructure Software, Services and Telecommunication products from the world leading vendors in each segment</span></p>
+                                    No other company delivers as broad and deep a spectrum of technology and supply chain services to businesses around the world. Founded in 1979, Ingram Micro’s role as a leader and innovator in technology and Commerce and Fulfillment has fueled its rise to the 64th ranked corporation in the FORTUNE 500®.
+                                    Ingram Micro in the META region (Middle East, Turkey and Africa) is the authorized distributor for most of the leading IT hardware, software and communications manufacturers in the world. Ingram Micro distributes a wide range of Value Added solutions and products covering Data Centre solutions, Software &amp; Virtualization, Servers, Storage, Cyber Security, Networking, Infrastructure Software, Services and Telecommunication products from the world leading vendors in each segment<br>
+                                   
+                                 </p>
+                                 <a href="#" class="read-more-a bio_read_more">Read More...</a>
                                 </div>
-                                <div class="distribution-readmore">
+                                <!-- <div class="distribution-readmore">
                                     <a href="#" id="readmore-1" onclick="readMore(this.id)">Read More...</a>
-                                </div>
+                                </div> -->
                                 <div class="visit-button">
                                     <a href="https://meta.ingrammicro.com/" target="_blank">Visit Website</a>
                                     <a data-bs-toggle="collapse" href="#ingramCollapse" role="button" aria-expanded="false" aria-controls="ingramCollapse"> Contact Us </a>
@@ -2751,12 +2917,14 @@
                                     <h4>Logicom</h4>
                                     <img src="http://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/logicom.png" alt="">
                                 </div>
-                                <div class="distribution-content" id="area_text_details_2">
-                                    <p>Logicom is a leading Distributor of Technology Solutions and Services and Cloud Solution Provider covering a wide geography in Europe, the Middle East and North Africa. Providing an indispensable link in the technology supply chain, Logicom facilitates mutually beneficial relationships with its vendors and channel partners. The company is headquartered in Cyprus and is listed on the Cyprus Stock Exchange since 2000. Its key technology vendor partnerships include Adobe, APC, Autodesk, Cisco,  <span id="moreText2">Hewlett Packard Enterprise, HP Inc, IBM, Intel, Kingston Technology, Lenovo, Microsoft, NetApp, and WD. For more information on Logicom, please check our website distribution.logicom.net, ‘Like’ our Facebook page and follow Logicom on LinkedIn, Twitter and Instagram.</span></p>
+                                <div class="distribution-content audi-distribution-content" id="area_text_details_2">
+                                    <p>Logicom is a leading Distributor of Technology Solutions and Services and Cloud Solution Provider covering a wide geography in Europe, the Middle East and North Africa. Providing an indispensable link in the technology supply chain, Logicom facilitates mutually beneficial relationships with its vendors and channel partners. The company is headquartered in Cyprus and is listed on the Cyprus Stock Exchange since 2000. Its key technology vendor partnerships include Adobe, APC, Autodesk, Cisco,  Hewlett Packard Enterprise, HP Inc, IBM, Intel, Kingston Technology, Lenovo, Microsoft, NetApp, and WD. For more information on Logicom, please check our website distribution.logicom.net, ‘Like’ our Facebook page and follow Logicom on LinkedIn, Twitter and Instagram.
+                                    </p>
+                                    <a href="#" class="read-more-a bio_read_more">Read More...</a>
                                 </div>
-                                <div class="distribution-readmore">
-                                    <a href="#" id="readmore-2" onclick="readMore(this.id)">Read More...</a>
-                                </div>
+                                <!-- <div class="distribution-readmore">
+                                    <a href="#" class>Read More...</a>
+                                </div> -->
                                 <div class="visit-button">
                                     <a href="https://cisco.logicomdistribution.net/" target="_blank">Visit Website</a>
                                     <a data-bs-toggle="collapse" href="#logicomCollapse" role="button" aria-expanded="false" aria-controls="logicomCollapse"> Contact Us </a>

@@ -264,3 +264,86 @@ function readMore(id) {
     }
   }
 }
+function nextPrev(id) {
+  let nextbtn = document.getElementById("nextBtn");
+  let prevbtn = document.getElementById("prevBtn");
+  let firstDiv = document.getElementById("first_div");
+  let lastDiv = document.getElementById("last_div");
+  let fb1 = document.querySelector(".fb-1");
+  let fb2 = document.querySelector(".fb-2");
+  let fb3 = document.querySelector(".fb-3");
+  let fb4 = document.querySelector(".fb-4");
+  let fb5 = document.querySelector(".fb-5");
+  let fb6 = document.querySelector(".fb-6");
+  let fb7 = document.querySelector(".fb-7");
+  let fb8 = document.querySelector(".fb-8");
+  let fb9 = document.querySelector(".fb-9");
+  let fb10 = document.querySelector(".fb-10");
+
+  if (id === "nextBtn") {
+    if (id === "nextBtn" && prevbtn.style.display === "none") {
+      prevbtn.style.display = "block";
+      fb1.style.display = "none";
+      fb2.style.display = "block";
+    } else if (fb2.style.display === "block") {
+      fb2.style.display = "none";
+      fb3.style.display = "block";
+    } else if (fb3.style.display === "block") {
+      fb3.style.display = "none";
+      fb4.style.display = "block";
+    } else if (fb4.style.display === "block") {
+      fb4.style.display = "none";
+      fb5.style.display = "block";
+    } else if (fb5.style.display === "block") {
+      fb5.style.display = "none";
+      fb6.style.display = "block";
+    } else if (fb6.style.display === "block") {
+      fb6.style.display = "none";
+      fb7.style.display = "block";
+    } else if (fb7.style.display === "block") {
+      fb7.style.display = "none";
+      fb8.style.display = "block";
+    } else if (fb8.style.display === "block") {
+      fb8.style.display = "none";
+      fb9.style.display = "block";
+    } else if (fb9.style.display === "block") {
+      fb9.style.display = "none";
+      fb10.style.display = "block";
+    } else if (fb10.style.display === "block") {
+      fb10.style.display = "none";
+      document.getElementById("feedback-out").style.display = "block";
+      nextbtn.style.display = "none";
+      prevbtn.style.display = "none";
+    }
+  } else if (id === "prevBtn") {
+    if (fb2.style.display === "block") {
+      prevbtn.style.display = "none";
+      fb2.style.display = "none";
+      fb1.style.display = "block";
+    } else if (fb3.style.display === "block") {
+      fb3.style.display = "none";
+      fb2.style.display = "block";
+    } else if (fb4.style.display === "block") {
+      fb4.style.display = "none";
+      fb3.style.display = "block";
+    } else if (fb5.style.display === "block") {
+      fb5.style.display = "none";
+      fb4.style.display = "block";
+    } else if (fb6.style.display === "block") {
+      fb6.style.display = "none";
+      fb5.style.display = "block";
+    } else if (fb7.style.display === "block") {
+      fb7.style.display = "none";
+      fb6.style.display = "block";
+    } else if (fb8.style.display === "block") {
+      fb8.style.display = "none";
+      fb7.style.display = "block";
+    } else if (fb9.style.display === "block") {
+      fb9.style.display = "none";
+      fb8.style.display = "block";
+    } else if (fb10.style.display === "block") {
+      fb10.style.display = "none";
+      fb9.style.display = "block";
+    }
+  }
+}
