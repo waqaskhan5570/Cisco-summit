@@ -15,15 +15,17 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />  
+    <link rel="stylesheet" href="../css/breakout-session.css" />
     <link rel="stylesheet" href="../css/lobby.css" />
     <link rel="stylesheet" href="../css/breakout-room-a.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <title>Breakout Room A day 1 - Cisco Gulf Partner Summit</title>
   </head>   
    <body>
  
     
-        <div class="background-image-desktop" style="background-image:url(../img/breakout-days.png);"></div>
-        <!-- <div class="background-image-mobile" style="background-image:url(https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/background-mobile.png);"></div> -->
+        <div class="background-image-desktop" class="background-image-desktop" style="background-image:url(../img/breakout-days.png);"></div>
+        <div class="background-image-mobile" style="background-image:url(../img/background-mobile.png);"></div>
     
  <div id="breakout-content">
     <div class="nav-menu-area">
@@ -35,16 +37,12 @@
               alt=""
           /></a>
         </div>
+        <div class="middle-summitgulf">
+            <h5>Cisco Gulf<br>Partner Summit</h5>
+        </div>
         
         <div class="menu-area">
           <div class="main-menu">
-
-            <a href="#" class="closebtn mobile-only"
-              ><img
-                src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/close.png"
-                alt=""
-            /></a>
-            <h4 class="mobile-only">Hello,<br />Abdul Razzaque</h4>
 
             <ul>
               <li >
@@ -70,9 +68,13 @@
             </ul>
           </div>
         </div>
-        <div class="welcome-button">
-          <h4>Hello,<br />Abdul Razzaque</h4>
+        <div class="mobile-toggle">
+            <span class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></span>
         </div>
+        <div class="welcome-button">
+          <h4>Hello,<br /><span id="yourName"></span></h4>
+        </div>
+        
       </div>
     </div>
     <!--  -->
@@ -130,7 +132,401 @@
       </ul>
     </div>
 
+    <div class="mobile-areas-lobby mobile-only breakout-days-1">
+        <div class="top_area_welcom">
+            <h5>Room A: Security</h5>
+        </div>
+        <div class="top_lobby_video">
+            
+        </div>
+        <div class="bottom_lobby_buttons">
+            <ul>
+                <li><a href="#" id="watch-1" onclick="play_video_day(this.id)" >Watch Day 1</a></li>
+                <li><a href="#" id="watch-2" onclick="play_video_day(this.id)">Watch Day 2</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#agenda-a">Agenda</a></li>
+                <li><a href="./breakout-session.html">Breakout Sessions</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#speakers-bio">Speaker Bio</a></li>
+                <li><a href="#">May I Help You ?</a></li>
+            </ul>
+        </div>
+    </div>
+
     <!-- All pop ups -->
+
+    <!-- Mob menu -->
+     <div class="offcanvas offcanvas-end nav-mob" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header nav-mob-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="mobile-only">Hello,<br><span id="yourNameMob"></span></h4>
+        
+    </div>
+    <div class="offcanvas-body nav-menu-mob ">
+        <ul class="mob-menu">
+              <li >
+                <a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a>
+                
+              </li>
+              <li>
+                <a href="lobby.html">Lobby</a>
+              </li>
+              <li>
+                <a href="auditorium.html">Auditorium</a>
+              </li>
+
+              <li class="networking">
+                <a href="networking-lounge.html">Networking <br />Lounge</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
+              </li>
+            </ul>
+    </div>
+    </div>
+
+    <!-- agenda a -->
+
+    <div class="modal text-center" id="agenda-a" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="date-area">
+                        <ul class="day-menu">
+                            <li class="active" id="day-a-1" onclick="agendaDay1(this.id)"><strong>Day1</strong>-(April 6th)</li>
+                            <li class="" id="day-a-2" onclick="agendaDay2(this.id)"><strong>Day2</strong>-(April 7th)</li>
+                        </ul>
+                    </div>
+                    <div class="days-tab">
+                        <!-- day 1 -->
+                        <div class="agenda_dayA_select active" id="day-area-a-1">
+                            <div class="educational-section row">
+                                <div class="time col-2">
+                                    <h3>time <br> (GMT +4)</h3>
+                                </div>
+                                <div class="educational-area col-10">
+                                 <h3>Auditorium Sessions</h3>
+                                </div>
+                          </div>
+                          <div class="list_breakout active" id="breakout-security"> 
+                            <!-- Single agenta item start -->
+                                    <div class="agenda-main-area"> 
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>12:19</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area ">
+                                            <div class="agenda-right-header">
+                                                <div class="agenda-right-left">
+                                                    <div class="agenda-linga">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/microphone-three.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-usimg">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 7.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-uname">
+                                                        <h4>Rami <br>Abbas </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-right">
+                                                    <div class="agenda-description">
+                                                        <p>Cyber Security Specialist, Cisco</p>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-footer">
+                                                    <div class="agenda-footer-left">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-two.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-footer-right">
+                                                        <h5>SASE + SD-WAN</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>12:53</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-header">
+                                                <div class="agenda-right-left">
+                                                    <div class="agenda-linga">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/microphone-three.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-usimg">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 8.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-uname">
+                                                        <h4>Ahmad <br>Chehime</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-right">
+                                                    <div class="agenda-description">
+                                                        <p>Regional Technology Incubation <br>Specialist/Lead</p>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-footer">
+                                                    <div class="agenda-footer-left">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-two.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-footer-right">
+                                                        <h5>Cisco Microsegmentation and <br>Workload Protection </h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area full"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>13:28</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-footer blue-bg">
+                                                <div class="agenda-footer-left">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-one.png" alt="">
+                                                </div>
+                                                <div class="agenda-footer-right">
+                                                    <h5>Break &amp; Interactive Games</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>13:45</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-header">
+                                                <div class="agenda-right-left">
+                                                    <div class="agenda-linga">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/microphone-three.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-usimg">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 9.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-uname">
+                                                        <h4>Mahmoud<br> Rabi</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-right">
+                                                    <div class="agenda-description">
+                                                        <p>Cyber Security Specialist</p>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-footer">
+                                                    <div class="agenda-footer-left">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-two.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-footer-right">
+                                                        <h5>SecureX</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area full"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>14:15</h3>
+                                                <div class="arrows-line last"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-footer blue-bg">
+                                                <div class="agenda-footer-left">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-one.png" alt="">
+                                                </div>
+                                                <div class="agenda-footer-right">
+                                                    <h5>Wrap up &amp; Day 1 Award Ceremony</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                </div>
+                        </div>
+                        <!-- day 2  -->
+                        <div class="agenda_dayB_select " id="day-area-a-2">
+                          <div class="educational-section row">
+                            <div class="time col-2">
+                                <h3>Time <br> (GMT +4)</h3>
+                            </div>
+                            <div class="educational-area col-10">
+                              <h3>Auditorium Sessions</h3>
+                            </div>
+                          </div>
+                          <div class="list_breakout active" id="breakout-security1"> 
+                            <!-- Single agenta item start -->
+                                    <div class="agenda-main-area"> 
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>12:22</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area ">
+                                            <div class="agenda-right-header">
+                                                <div class="agenda-right-left">
+                                                    <div class="agenda-linga">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/microphone-three.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-usimg">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset%2026.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-uname">
+                                                        <h4>Hadil <br>Ghaban </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-right">
+                                                    <div class="agenda-description">
+                                                        <p>Cyber Security Technical Solutions </br> Specialist</p>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-footer">
+                                                    <div class="agenda-footer-left">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-two.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-footer-right">
+                                                        <h5>SASE + SD-WAN</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>12:56</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-header">
+                                                <div class="agenda-right-left">
+                                                    <div class="agenda-linga">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/microphone-three.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-usimg">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset%2025.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-uname">
+                                                        <h4>Mazid<br> Al Jundi <br>Chehime</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-right">
+                                                    <div class="agenda-description">
+                                                        <p>Technical Lead For Cisco Secure Workload </p>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-footer">
+                                                    <div class="agenda-footer-left">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-two.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-footer-right">
+                                                        <h5>Secure Workload</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area full"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>13:34</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-footer blue-bg">
+                                                <div class="agenda-footer-left">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-one.png" alt="">
+                                                </div>
+                                                <div class="agenda-footer-right">
+                                                    <h5>Break &amp; Interactive Games</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>13:49</h3>
+                                                <div class="arrows-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-header">
+                                                <div class="agenda-right-left">
+                                                    <div class="agenda-linga">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/microphone-three.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-usimg">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset%2027.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-uname">
+                                                        <h4>Omar<br> Ma'ayah</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-right">
+                                                    <div class="agenda-description">
+                                                        <p>Technical Solutions Architect</p>
+                                                    </div>
+                                                </div>
+                                                <div class="agenda-right-footer">
+                                                    <div class="agenda-footer-left">
+                                                        <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-two.png" alt="">
+                                                    </div>
+                                                    <div class="agenda-footer-right">
+                                                        <h5>SecureX</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                    <div class="agenda-main-area full"> <!-- Single agenta item start -->
+                                        <div class="agenda-left-area">
+                                            <div class="agenda-times">
+                                                <h3>14:15</h3>
+                                                <div class="arrows-line last"></div>
+                                            </div>
+                                        </div>
+                                        <div class="agenda-right-area">
+                                            <div class="agenda-right-footer blue-bg">
+                                                <div class="agenda-footer-left">
+                                                    <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/note-one.png" alt="">
+                                                </div>
+                                                <div class="agenda-footer-right">
+                                                    <h5>Wrap up &amp; Day 2 Award Ceremony</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- Single agenda item end -->
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Feedback -->
     <div class="modal fade " id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -2506,6 +2902,12 @@
   </script>
    <script src="../js/breakout-room.js" >
   </script>
+
+  <script src="../js/breakout.js" >
+  </script>
+
+
+  
   
 
   </body>

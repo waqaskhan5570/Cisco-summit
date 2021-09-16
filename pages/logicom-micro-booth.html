@@ -17,14 +17,18 @@
     ></script>
     <link rel="stylesheet" href="../css/lobby.css" />
     <link rel="stylesheet" href="../css/ingram-booth.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
 
     <title>Logicom Micro Booth- Cisco Gulf Partner Summit</title>
   </head>
   <body>
  
-    <video id="background-video" autoplay loop muted>
-      <source src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/logicom_11.mp4" type="video/mp4" />
-    </video>
+    <div class="bg-main">
+        <video id="background-video" class="background-image-desktop" autoplay loop muted>
+        <source src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/logicom_11.mp4" type="video/mp4" />
+        </video>
+        <div class="background-image-mobile" style="background-image: url(../img/background-mobile.png);"></div>
+    </div>
  <div id="lobby-content">
    <!-- Nav menu  -->
     <div class="nav-menu-area">
@@ -35,6 +39,9 @@
               src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/logo.png"
               alt=""
           /></a>
+        </div>
+        <div class="middle-summitgulf">
+            <h5>Cisco Gulf<br>Partner Summit</h5>
         </div>
         
         <div class="menu-area">
@@ -63,8 +70,11 @@
             </ul>
           </div>
         </div>
+        <div class="mobile-toggle">
+            <span class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></span>
+        </div>
         <div class="welcome-button">
-          <h4>Hello,<br />Abdul Razzaque</h4>
+          <h4>Hello,<br /><span id="yourName"></span></h4>
         </div>
       </div>
     </div>
@@ -94,15 +104,107 @@
       </ul>
     </div>
 
-    <div class="logicom-vedio ingram">
+    <div class="logicom-vedio ">
       <div style="padding:56.25% 0 0 0;position:relative;">
         <iframe src="https://player.vimeo.com/video/528749158?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" ; fullscreen; picture-in-picture allowfullscreen="" __idm_id__="163471370"></iframe>
       </div>
       <script src="https://player.vimeo.com/api/player.js"></script>
       </div>
 
+      <div class="mobile-areas-lobby mobile-only ingram">
+        <div class="top_area_welcom">
+            <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/Asset-5.png" alt="">
+            <h5>Ingram Micro Booth</h5>
+        </div>
+            <div class="top_lobby_video" style="margin-bottom: 12rem;">
+                
+            </div>
+            <div class="bottom_lobby_buttons"    >
+                <ul>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#single_videos_popup">Watch Demo</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#download">Downloads</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#chat-with-rep">Chat with Rep</a></li>
+                    <li><a href="./networking-lounge.html"><img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/doubble-arrow.png" alt=""> Back to Lounge</a></li>
+                </ul>
+            </div>
+        </div>
+
    
 <!-- All pop ups -->
+    <!-- Menu mob -->
+    
+
+    <div class="offcanvas offcanvas-end nav-mob" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header nav-mob-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="mobile-only">Hello,<br><span id="yourNameMob"></span></h4>
+        
+    </div>
+    <div class="offcanvas-body nav-menu-mob ">
+        <ul class="mob-menu">
+              <li >
+                <a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a>
+                
+              </li>
+              <li>
+                <a href="lobby.html">Lobby</a>
+              </li>
+              <li>
+                <a href="auditorium.html">Auditorium</a>
+              </li>
+
+              <li class="networking">
+                <a href="networking-lounge.html">Networking <br />Lounge</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
+              </li>
+            </ul>
+    </div>
+    </div>
+
+<!-- Logicom Watch demo -->
+<div class="modal fade " id="single_videos_popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog  modal-dialog-scrollable modal-xl modal-dialog-centered  ">
+         <div class="modal-content ">
+             <div div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body watch-demo ">
+                 <div class="popup_videos" id="video_selections">
+                        <div class="single-videos">
+                            <br>
+                            <div class="video_single_mine">
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/528748545" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="video_player_area_1" allowfullscreen="" __idm_id__="183849988" data-ready="true"></iframe></div>
+                            </div>
+                        </div>
+                        <div class="single-videos">
+                            <br>
+                            <div class="video_single_mine">
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/528748815" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="video_player_area_2" allowfullscreen="" data-ready="true" __idm_id__="183849989"></iframe></div>
+                            </div>
+                        </div>
+                        <div class="single-videos">
+                            <br>
+                            <div class="video_single_mine">
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/528748849" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="video_player_area_3" allowfullscreen="" __idm_id__="183849985" data-ready="true"></iframe></div>
+                            </div>
+                        </div>
+                        <div class="single-videos">
+                            <br>
+                            <div class="video_single_mine">
+                                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/528748887" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" id="video_player_area_4" allowfullscreen="" __idm_id__="183849992" data-ready="true"></iframe></div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+         </div>
+     </div>
+ </div>
 
 <!-- FeedBack -->
 <div class="modal fade " id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

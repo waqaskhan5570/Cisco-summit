@@ -17,14 +17,15 @@
     />  
     <link rel="stylesheet" href="../css/lobby.css" />
     <link rel="stylesheet" href="../css/breakout-session.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <title>Breakout Rooms - Cisco Gulf Partner Summit</title>
   </head>
    <body>
  
-    
-        <div class="background-image-desktop" style="background-image:url(../img/breakout.png);"></div>
-        <!-- <div class="background-image-mobile" style="background-image:url(https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/background-mobile.png);"></div> -->
-    
+    <div class="bg-main">
+        <div class="background-image-desktop" class="background-image-desktop" style="background-image:url(../img/breakout.png);"></div>
+        <div class="background-image-mobile" style="background-image:url(../img/background-mobile.png);"></div>
+    </div>
  <div id="breakout-content">
     <div class="nav-menu-area">
       <div class="main-menuarea">
@@ -35,16 +36,14 @@
               alt=""
           /></a>
         </div>
+
+         <div class="middle-summitgulf">
+            <h5>Cisco Gulf<br>Partner Summit</h5>
+        </div>
         
         <div class="menu-area">
           <div class="main-menu">
 
-            <a href="#" class="closebtn mobile-only"
-              ><img
-                src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/close.png"
-                alt=""
-            /></a>
-            <h4 class="mobile-only">Hello,<br />Abdul Razzaque</h4>
 
             <ul>
               <li >
@@ -70,8 +69,11 @@
             </ul>
           </div>
         </div>
+         <div class="mobile-toggle">
+            <span class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></span>
+        </div>
         <div class="welcome-button">
-          <h4>Hello,<br />Abdul Razzaque</h4>
+          <h4>Hello,<br /><span id="yourName"></span></h4>
         </div>
       </div>
     </div>
@@ -110,7 +112,79 @@
       </ul>
     </div>
 
+    <div class="mobile-areas-lobby mobile-only breakout">
+        <div class="top_area_welcom">
+            <h5>Breakout Rooms</h5>
+        </div>
+        <div class="area-breakout">
+            <div class="Breakout_rooms_1">
+                <h4>Room A : Security</h4>
+                <div class="room-buttonsd">
+                    <a href="./breakout-room-a.html">Watch Session</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#agenda-a">Agenda</a>
+                </div>
+            </div>
+            <div class="Breakout_rooms_2">
+                <h4>Room B : Cloud &amp; DC</h4>
+                <div class="room-buttonsd">
+                    <a href="./breakout-room-b.html">Watch Session</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#agenda-b">Agenda</a>
+                </div>
+            </div>
+            <div class="Breakout_rooms_3">
+                <h4>Room C : Collaboration</h4>
+                <div class="room-buttonsd">
+                    <a href="./breakout-room-c.html">Watch Session</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#agenda-c">Agenda</a>
+                </div>
+            </div>
+            <div class="Breakout_rooms_4">
+                <h4>Room D : Partner Programs</h4>
+                <div class="room-buttonsd">
+                    <a href="./breakout-room-d.html">Watch Session</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#agenda-d">Agenda</a>
+                </div>
+            </div>
+        </div>
+                    
+        </div>
+
     <!-- All pop ups -->
+
+        <!-- Menu mob -->
+    
+
+    <div class="offcanvas offcanvas-end nav-mob" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header nav-mob-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="mobile-only">Hello,<br><span id="yourNameMob"></span></h4>
+        
+    </div>
+    <div class="offcanvas-body nav-menu-mob ">
+        <ul class="mob-menu">
+              <li >
+                <a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a>
+                
+              </li>
+              <li>
+                <a href="lobby.html">Lobby</a>
+              </li>
+              <li>
+                <a href="auditorium.html">Auditorium</a>
+              </li>
+
+              <li class="networking">
+                <a href="networking-lounge.html">Networking <br />Lounge</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
+              </li>
+            </ul>
+    </div>
+    </div>
 
     <!-- feedback -->
     <div class="modal fade " id="feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -18,6 +18,13 @@
           />
           Your browser does not support HTML5 video.
         </video>
+        <video autoplay muted id="newVideo" style="display: none">
+          <source
+            src="./videos/entrance-transition.mp4"
+            id="video-src"
+            type="video/mp4"
+          />
+        </video>
         <div
           class="background-image-mobile"
           style="
@@ -32,14 +39,16 @@
 
     <script type="text/javascript">
       document.getElementById("video-popup").onclick = function () {
-        document.getElementById("myVideo").src =
-          "../videos/entrance-transition.mp4";
+        document.getElementById("myVideo").style.display = "none";
 
         document.getElementById("enter-btn").classList.add("display-none");
-
-        setTimeout(function () {
-          location.href = "./lobby.html";
-        }, 3900);
+        document.getElementById("newVideo").style.display = "block";
+        document
+          .getElementById("newVideo")
+          .addEventListener("ended", myHandler, true);
+        function myHandler(e) {
+          location.href = "./pages/lobby.html";
+        }
       };
     </script>
   </body>

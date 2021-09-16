@@ -17,14 +17,19 @@
     ></script>
     <link rel="stylesheet" href="../css/lobby.css" />
     <link rel="stylesheet" href="../css/networking-lounge.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
 
     <title>Network Lounge - Cisco Gulf Partner Summit</title>
   </head>
    <body>
  
-    <video id="background-video" autoplay loop muted>
-      <source src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/networking-lounge.m4v" type="video/mp4">
-    </video>
+    <div class="bg-main">
+        <video id="background-video" class="background-image-desktop" autoplay loop muted>
+        <source src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/uploads/2021/03/networking-lounge.m4v" type="video/mp4">
+        </video>
+        <div class="background-image-mobile" style="background-image: url(../img/background-mobile.png);"
+        ></div>
+    </div>
     <div id="networing-content">
       <!-- nav menu -->
     <div class="nav-menu-area">
@@ -35,6 +40,9 @@
               src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/logo.png"
               alt=""
           /></a>
+        </div>
+        <div class="middle-summitgulf">
+            <h5>Cisco Gulf<br>Partner Summit</h5>
         </div>
         
         <div class="menu-area">
@@ -63,8 +71,11 @@
             </ul>
           </div>
         </div>
+         <div class="mobile-toggle">
+            <span class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></span>
+        </div>
         <div class="welcome-button">
-          <h4>Hello,<br />Abdul Razzaque</h4>
+          <h4>Hello,<br /><span id="yourName"></span></h4>
         </div>
       </div>
     </div>
@@ -97,7 +108,73 @@
       </ul>
     </div>
 
+    <div class="mobile-areas-lobby mobile-only breakout">
+                    <div class="top_area_welcom">
+                        <h5>Networking Lounge</h5>
+                    </div>
+                    <div class="area-breakout">
+                        <div class="Breakout_rooms_1">
+                            <h4>Visit Sponsor Booths</h4>
+                            <div class="room-buttonsd">
+                                <a href="./ingram-micro-booth.html">Ingram Micro</a>
+                                <a href="./logicom-micro-booth.html">Logicom</a>
+                            </div>
+                        </div>
+                        <div class="Breakout_rooms_1">
+                            <h4>Browse Games</h4>
+                            <div class="room-buttonsd">
+                                <a target="_blank" href="https://qna.marcomarabiamea.com/">Cisco Quiz</a>
+                                <a target="_blank" class="race" href="https://racetothefuture.marcomarabiamea.com/">Race to <br>the future</a>
+                                <a target="_blank" class="simon" href="https://simonsayswebex.marcomarabiamea.com/">Simon Says “Webex”</a>
+                                <a target="_blank" class="solve" href="https://ciscopuzzle.marcomarabiamea.com/">Solve the Puzzle</a>
+                            </div>
+                            <p>( Games can only be accessed during the break time )</p>
+                        </div>
+                        <div class="Breakout_rooms_1">
+                            <h4>Room C : Collaboration</h4>
+                            <div class="room-buttonsd">
+                                <a href="https://cisco2.vasriyaitdemo.in/photobooth" class="photobooth" target="_blank">Access Photobooth</a>
+                            </div>
+                            <p>( Photobooth can only be accessed during the break time )</p>
+                        </div>
+                    </div>
+                 </div>
+
     <!-- All pop ups -->
+        <!-- Menu mob -->
+    
+
+    <div class="offcanvas offcanvas-end nav-mob" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header nav-mob-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="mobile-only">Hello,<br><span id="yourNameMob"></span></h4>
+        
+    </div>
+    <div class="offcanvas-body nav-menu-mob ">
+        <ul class="mob-menu">
+              <li >
+                <a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a>
+                
+              </li>
+              <li>
+                <a href="lobby.html">Lobby</a>
+              </li>
+              <li>
+                <a href="auditorium.html">Auditorium</a>
+              </li>
+
+              <li class="networking">
+                <a href="networking-lounge.html">Networking <br />Lounge</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
+              </li>
+            </ul>
+    </div>
+    </div>
 
 <!-- Browse games toggle -->
 

@@ -10,8 +10,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+       
+
     <link rel="stylesheet" href="../css/lobby.css" />
     <link rel="stylesheet" href="../css/auditorium.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
 
 
 
@@ -24,7 +27,11 @@
   </head>
   <body>
  
-    <div class="background-image-desktop" style="background-image:url(../img/background-img.png)"></div>
+    <div class="bg-main">
+        <div class="background-image-desktop" style="background-image:url(../img/background-img.png)"></div>
+        <div class="background-image-mobile" style="background-image: url(../img/background-mobile.png);"
+        ></div>
+    </div>
  <div id="lobby-content">
    <div class="nav-menu-area">
       <div class="main-menuarea">
@@ -35,16 +42,12 @@
               alt=""
           /></a>
         </div>
+        <div class="middle-summitgulf">
+            <h5>Cisco Gulf<br>Partner Summit</h5>
+        </div>
         
         <div class="menu-area">
           <div class="main-menu">
-
-            <a href="#" class="closebtn mobile-only"
-              ><img
-                src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/images/close.png"
-                alt=""
-            /></a>
-            <h4 class="mobile-only">Hello,<br />Abdul Razzaque</h4>
 
             <ul>
               <li >
@@ -69,8 +72,11 @@
             </ul>
           </div>
         </div>
+        <div class="mobile-toggle">
+            <span class="navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></span>
+        </div>
         <div class="welcome-button">
-          <h4>Hello,<br />Abdul Razzaque</h4>
+          <h4>Hello,<br /><span id="yourName"></span></h4>
         </div>
       </div>
     </div>
@@ -90,11 +96,7 @@
         <a href="#" data-bs-toggle="modal" data-bs-target="#speakers-bio" >Speakers Bio</a>
     </div>
 
-    
 
- 
-    
-    
     
     <div class="bottom-button desktop-only">
         <ul>
@@ -104,6 +106,59 @@
           >
         </li>
       </ul>
+    </div>
+    <div class="mobile-areas-lobby mobile-only">
+                    <div class="top_area_welcom">
+                        <h5>Auditorium</h5>
+                    </div>
+                     <div class="top_lobby_video">
+                         
+                     </div>
+                     <div class="bottom_lobby_buttons"> 
+                         <ul>
+                            <li><a href="#" >Watch Day 1</a></li>
+                            <li><a href="#" >Watch Day 2</a></li>
+                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a></li>
+                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a></li>
+                             <li><a href="./breakout-session.html" >Breakout Sessions</a></li>
+                             <li><a href="#" data-bs-toggle="modal" data-bs-target="#speakers-bio">Speaker Bio</a></li>
+                             <li><a href="#">May I Help You ?</a></li>
+                         </ul>
+                     </div>
+                 </div>
+    
+
+    <!-- Mob menu -->
+      <div class="offcanvas offcanvas-end nav-mob" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header nav-mob-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="mobile-only">Hello,<br><span id="yourNameMob"></span></h4>
+        
+    </div>
+    <div class="offcanvas-body nav-menu-mob ">
+        <ul class="mob-menu">
+              <li >
+                <a href="#" data-bs-toggle="modal" data-bs-target="#agenda">Agenda</a>
+                
+              </li>
+              <li>
+                <a href="lobby.html">Lobby</a>
+              </li>
+              <li>
+                <a href="auditorium.html">Auditorium</a>
+              </li>
+
+              <li class="networking">
+                <a href="networking-lounge.html">Networking <br />Lounge</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#feedback">Feedback</a>
+              </li>
+              <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#visit-distributors">Visit Distributors</a>
+              </li>
+            </ul>
+    </div>
     </div>
 
     <!-- Speakers bio -->
@@ -1045,7 +1100,7 @@
                                     <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 1.png" alt="">
                                   </div>
                                   <div class="agenda-uname">
-                                    <h4>James<br>Taylor</h4>
+                                    <h4>James <br>Taylor</h4>
                                   </div>
                                 </div>
                                 
@@ -1834,7 +1889,7 @@
                                                         <img src="https://ciscogulfpartnersummit.marcomarabiamea.com/wp-content/themes/ciscogulfpartner2021/img/Asset 20.png" alt="">
                                                     </div>
                                                     <div class="agenda-uname">
-                                                        <h4>Stephanie Liu</h4>
+                                                        <h4>Stephanie <br>Liu</h4>
                                                     </div>
                                                 </div>
                                                 <div class="agenda-right-right">

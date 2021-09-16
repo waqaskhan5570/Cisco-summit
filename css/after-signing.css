@@ -40,6 +40,8 @@
   font-weight: bold;
   color: #fff;
   display: inline-block;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 #video-popup::after {

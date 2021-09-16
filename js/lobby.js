@@ -1,3 +1,10 @@
+window.addEventListener("load", () => {
+  const name = localStorage.getItem("NAME");
+
+  document.getElementById("yourName").innerHTML = name;
+  document.getElementById("yourNameMob").innerHTML = name;
+});
+
 function changeDay2() {
   var day1 = document.getElementById("day-1");
   var day2 = document.getElementById("day-2");
@@ -207,35 +214,49 @@ function changePartnerProgramTab1() {
 function goToAudi() {
   document.getElementById("background-video").src =
     "../videos/audi-transition.mp4";
+  document.getElementById("background-video").loop = false;
 
   document.getElementById("lobby-content").classList.add("display-none");
+  document
+    .getElementById("background-video")
+    .addEventListener("ended", myHandler, true);
+  function myHandler(e) {
+    location.href = "../pages/auditorium.html";
+  }
 
-  setTimeout(function () {
-    location.href = "auditorium.html";
-  }, 4000);
+  // setTimeout(function () {
+  //   location.href = "auditorium.html";
+  // }, 4000);
 }
 
 function goToBr() {
   document.getElementById("background-video").src =
     "../videos/br-transition.mp4";
+  document.getElementById("background-video").loop = false;
 
   document.getElementById("lobby-content").classList.add("display-none");
+  document
+    .getElementById("background-video")
+    .addEventListener("ended", myHandler, true);
+  function myHandler(e) {
+    location.href = "../pages/breakout-session.html";
+  }
 
-  setTimeout(function () {
-    location.href = "breakout-session.html";
-  }, 5000);
+  // setTimeout(function () {
+  //   location.href = "breakout-session.html";
+  // }, 5000);
 }
 
 function mute() {
   let iframe = document.getElementById("video_player_area_lobby");
   let btn = document.getElementById("muteunmute");
 
-  if (btn.textContent === "mute") {
-    iframe.contentWindow.postMessage('{"method":"setVolume", "value":0}', "*");
-    btn.innerHTML = "unmute";
-  } else if (btn.textContent === "unmute") {
+  if (btn.textContent === "unmute") {
     iframe.contentWindow.postMessage('{"method":"setVolume", "value":1}', "*");
     btn.innerHTML = "mute";
+  } else if (btn.textContent === "mute") {
+    iframe.contentWindow.postMessage('{"method":"setVolume", "value":0}', "*");
+    btn.innerHTML = "unmute";
   }
 }
 
