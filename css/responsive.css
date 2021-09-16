@@ -1,4 +1,8 @@
 @media (max-width: 991px) {
+  #video-popup {
+    padding: 10px 54px;
+  }
+
   .desktop-only {
     display: none !important;
   }
