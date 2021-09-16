@@ -192,9 +192,9 @@ form {
   }
 
   .middle-area {
-    position: fixed;
+    position: absolute;
     max-width: 99%;
-    bottom: -4.8rem;
+    bottom: -4.5rem;
     left: 1%;
     margin-top: 10px;
   }
